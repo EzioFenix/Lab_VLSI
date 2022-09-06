@@ -1,0 +1,18 @@
+Fitter Status : Successful - Tue Sep  6 14:29:43 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : practicaFBD
+Top-level Entity Name : practicaFBD
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 90 / 49,760 ( < 1 % )
+    Total combinational functions : 59 / 49,760 ( < 1 % )
+    Dedicated logic registers : 67 / 49,760 ( < 1 % )
+Total registers : 67
+Total pins : 43 / 360 ( 12 % )
+Total virtual pins : 0
+Total memory bits : 0 / 1,677,312 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )
