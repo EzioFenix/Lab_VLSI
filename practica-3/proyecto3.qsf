@@ -70,4 +70,5 @@ set_location_assignment PIN_D13 -to led5
 set_location_assignment PIN_C13 -to led6
 set_location_assignment PIN_E14 -to led7
 set_location_assignment PIN_D14 -to led8
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

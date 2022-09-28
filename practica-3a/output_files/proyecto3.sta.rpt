@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for proyecto3
-Fri Sep 09 22:13:42 2022
+Fri Sep 16 23:43:38 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -89,13 +89,13 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.08        ;
+; Average used               ; 1.26        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.6%      ;
-;     Processors 3-16        ;   0.5%      ;
+;     Processor 2            ;   1.9%      ;
+;     Processors 3-16        ;   1.7%      ;
 +----------------------------+-------------+
 
 
@@ -115,9 +115,9 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-----------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name            ; Note                                                          ;
 +------------+-----------------+-----------------------+---------------------------------------------------------------+
-; 233.37 MHz ; 233.37 MHz      ; divisor:N1|cuenta[10] ;                                                               ;
-; 320.51 MHz ; 250.0 MHz       ; reloj                 ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 843.88 MHz ; 416.15 MHz      ; divisor:N2|cuenta[23] ; limit due to minimum period restriction (tmin)                ;
+; 226.65 MHz ; 226.65 MHz      ; divisor:N1|cuenta[10] ;                                                               ;
+; 316.56 MHz ; 316.56 MHz      ; divisor:N2|cuenta[23] ;                                                               ;
+; 320.92 MHz ; 250.0 MHz       ; reloj                 ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+-----------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -127,9 +127,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; divisor:N1|cuenta[10] ; -3.285 ; -32.988       ;
-; reloj                 ; -2.142 ; -33.430       ;
-; divisor:N2|cuenta[23] ; -0.185 ; -0.628        ;
+; divisor:N1|cuenta[10] ; -3.412 ; -32.497       ;
+; reloj                 ; -2.287 ; -33.540       ;
+; divisor:N2|cuenta[23] ; -2.159 ; -114.146      ;
 +-----------------------+--------+---------------+
 
 
@@ -138,9 +138,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------+-------+---------------+
 ; Clock                 ; Slack ; End Point TNS ;
 +-----------------------+-------+---------------+
-; reloj                 ; 0.355 ; 0.000         ;
-; divisor:N2|cuenta[23] ; 0.455 ; 0.000         ;
-; divisor:N1|cuenta[10] ; 0.638 ; 0.000         ;
+; divisor:N2|cuenta[23] ; 0.348 ; 0.000         ;
+; reloj                 ; 0.356 ; 0.000         ;
+; divisor:N1|cuenta[10] ; 0.639 ; 0.000         ;
 +-----------------------+-------+---------------+
 
 
@@ -162,8 +162,8 @@ No paths to report.
 ; Clock                 ; Slack  ; End Point TNS    ;
 +-----------------------+--------+------------------+
 ; reloj                 ; -3.000 ; -38.075          ;
+; divisor:N2|cuenta[23] ; -1.403 ; -85.583          ;
 ; divisor:N1|cuenta[10] ; -1.403 ; -22.448          ;
-; divisor:N2|cuenta[23] ; -1.403 ; -19.642          ;
 +-----------------------+--------+------------------+
 
 
@@ -178,9 +178,9 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name            ; Note                                                          ;
 +------------+-----------------+-----------------------+---------------------------------------------------------------+
-; 253.42 MHz ; 253.42 MHz      ; divisor:N1|cuenta[10] ;                                                               ;
-; 356.89 MHz ; 250.0 MHz       ; reloj                 ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 925.93 MHz ; 416.15 MHz      ; divisor:N2|cuenta[23] ; limit due to minimum period restriction (tmin)                ;
+; 252.72 MHz ; 252.72 MHz      ; divisor:N1|cuenta[10] ;                                                               ;
+; 348.19 MHz ; 348.19 MHz      ; divisor:N2|cuenta[23] ;                                                               ;
+; 357.53 MHz ; 250.0 MHz       ; reloj                 ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+-----------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -190,9 +190,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; divisor:N1|cuenta[10] ; -2.946 ; -28.649       ;
-; reloj                 ; -1.829 ; -27.823       ;
-; divisor:N2|cuenta[23] ; -0.080 ; -0.143        ;
+; divisor:N1|cuenta[10] ; -2.957 ; -27.870       ;
+; reloj                 ; -1.938 ; -27.861       ;
+; divisor:N2|cuenta[23] ; -1.872 ; -98.914       ;
 +-----------------------+--------+---------------+
 
 
@@ -201,9 +201,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------+-------+---------------+
 ; Clock                 ; Slack ; End Point TNS ;
 +-----------------------+-------+---------------+
-; reloj                 ; 0.320 ; 0.000         ;
-; divisor:N2|cuenta[23] ; 0.417 ; 0.000         ;
-; divisor:N1|cuenta[10] ; 0.589 ; 0.000         ;
+; divisor:N2|cuenta[23] ; 0.312 ; 0.000         ;
+; reloj                 ; 0.321 ; 0.000         ;
+; divisor:N1|cuenta[10] ; 0.590 ; 0.000         ;
 +-----------------------+-------+---------------+
 
 
@@ -225,8 +225,8 @@ No paths to report.
 ; Clock                 ; Slack  ; End Point TNS   ;
 +-----------------------+--------+-----------------+
 ; reloj                 ; -3.000 ; -38.075         ;
+; divisor:N2|cuenta[23] ; -1.403 ; -85.583         ;
 ; divisor:N1|cuenta[10] ; -1.403 ; -22.448         ;
-; divisor:N2|cuenta[23] ; -1.403 ; -19.642         ;
 +-----------------------+--------+-----------------+
 
 
@@ -241,9 +241,9 @@ No synchronizer chains to report.
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; reloj                 ; -0.882 ; -2.407        ;
-; divisor:N1|cuenta[10] ; -0.800 ; -5.648        ;
-; divisor:N2|cuenta[23] ; 0.481  ; 0.000         ;
+; reloj                 ; -0.940 ; -2.439        ;
+; divisor:N1|cuenta[10] ; -0.856 ; -5.909        ;
+; divisor:N2|cuenta[23] ; -0.376 ; -14.644       ;
 +-----------------------+--------+---------------+
 
 
@@ -252,9 +252,9 @@ No synchronizer chains to report.
 +-----------------------+-------+---------------+
 ; Clock                 ; Slack ; End Point TNS ;
 +-----------------------+-------+---------------+
-; reloj                 ; 0.150 ; 0.000         ;
-; divisor:N2|cuenta[23] ; 0.186 ; 0.000         ;
-; divisor:N1|cuenta[10] ; 0.248 ; 0.000         ;
+; reloj                 ; 0.151 ; 0.000         ;
+; divisor:N2|cuenta[23] ; 0.152 ; 0.000         ;
+; divisor:N1|cuenta[10] ; 0.247 ; 0.000         ;
 +-----------------------+-------+---------------+
 
 
@@ -275,9 +275,9 @@ No paths to report.
 +-----------------------+--------+-----------------+
 ; Clock                 ; Slack  ; End Point TNS   ;
 +-----------------------+--------+-----------------+
-; reloj                 ; -3.000 ; -28.737         ;
+; reloj                 ; -3.000 ; -28.727         ;
+; divisor:N2|cuenta[23] ; -1.000 ; -61.000         ;
 ; divisor:N1|cuenta[10] ; -1.000 ; -16.000         ;
-; divisor:N2|cuenta[23] ; -1.000 ; -14.000         ;
 +-----------------------+--------+-----------------+
 
 
@@ -287,20 +287,20 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                 ;
-+------------------------+---------+-------+----------+---------+---------------------+
-; Clock                  ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack       ; -3.285  ; 0.150 ; N/A      ; N/A     ; -3.000              ;
-;  divisor:N1|cuenta[10] ; -3.285  ; 0.248 ; N/A      ; N/A     ; -1.403              ;
-;  divisor:N2|cuenta[23] ; -0.185  ; 0.186 ; N/A      ; N/A     ; -1.403              ;
-;  reloj                 ; -2.142  ; 0.150 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS        ; -67.046 ; 0.0   ; 0.0      ; 0.0     ; -80.165             ;
-;  divisor:N1|cuenta[10] ; -32.988 ; 0.000 ; N/A      ; N/A     ; -22.448             ;
-;  divisor:N2|cuenta[23] ; -0.628  ; 0.000 ; N/A      ; N/A     ; -19.642             ;
-;  reloj                 ; -33.430 ; 0.000 ; N/A      ; N/A     ; -38.075             ;
-+------------------------+---------+-------+----------+---------+---------------------+
++--------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                  ;
++------------------------+----------+-------+----------+---------+---------------------+
+; Clock                  ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack       ; -3.412   ; 0.151 ; N/A      ; N/A     ; -3.000              ;
+;  divisor:N1|cuenta[10] ; -3.412   ; 0.247 ; N/A      ; N/A     ; -1.403              ;
+;  divisor:N2|cuenta[23] ; -2.159   ; 0.152 ; N/A      ; N/A     ; -1.403              ;
+;  reloj                 ; -2.287   ; 0.151 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS        ; -180.183 ; 0.0   ; 0.0      ; 0.0     ; -146.106            ;
+;  divisor:N1|cuenta[10] ; -32.497  ; 0.000 ; N/A      ; N/A     ; -22.448             ;
+;  divisor:N2|cuenta[23] ; -114.146 ; 0.000 ; N/A      ; N/A     ; -85.583             ;
+;  reloj                 ; -33.540  ; 0.000 ; N/A      ; N/A     ; -38.075             ;
++------------------------+----------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -392,9 +392,9 @@ No synchronizer chains to report.
 +-----------------------+-----------------------+----------+----------+----------+----------+
 ; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
-; divisor:N1|cuenta[10] ; divisor:N1|cuenta[10] ; 495      ; 0        ; 0        ; 0        ;
-; divisor:N2|cuenta[23] ; divisor:N1|cuenta[10] ; 74       ; 0        ; 0        ; 0        ;
-; divisor:N2|cuenta[23] ; divisor:N2|cuenta[23] ; 14       ; 0        ; 0        ; 0        ;
+; divisor:N1|cuenta[10] ; divisor:N1|cuenta[10] ; 324      ; 0        ; 0        ; 0        ;
+; divisor:N2|cuenta[23] ; divisor:N1|cuenta[10] ; 64       ; 0        ; 0        ; 0        ;
+; divisor:N2|cuenta[23] ; divisor:N2|cuenta[23] ; 1248     ; 0        ; 0        ; 0        ;
 ; divisor:N1|cuenta[10] ; reloj                 ; 1        ; 1        ; 0        ; 0        ;
 ; divisor:N2|cuenta[23] ; reloj                 ; 1        ; 1        ; 0        ; 0        ;
 ; reloj                 ; reloj                 ; 309      ; 0        ; 0        ; 0        ;
@@ -407,9 +407,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------+-----------------------+----------+----------+----------+----------+
 ; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
-; divisor:N1|cuenta[10] ; divisor:N1|cuenta[10] ; 495      ; 0        ; 0        ; 0        ;
-; divisor:N2|cuenta[23] ; divisor:N1|cuenta[10] ; 74       ; 0        ; 0        ; 0        ;
-; divisor:N2|cuenta[23] ; divisor:N2|cuenta[23] ; 14       ; 0        ; 0        ; 0        ;
+; divisor:N1|cuenta[10] ; divisor:N1|cuenta[10] ; 324      ; 0        ; 0        ; 0        ;
+; divisor:N2|cuenta[23] ; divisor:N1|cuenta[10] ; 64       ; 0        ; 0        ; 0        ;
+; divisor:N2|cuenta[23] ; divisor:N2|cuenta[23] ; 1248     ; 0        ; 0        ; 0        ;
 ; divisor:N1|cuenta[10] ; reloj                 ; 1        ; 1        ; 0        ; 0        ;
 ; divisor:N2|cuenta[23] ; reloj                 ; 1        ; 1        ; 0        ; 0        ;
 ; reloj                 ; reloj                 ; 309      ; 0        ; 0        ; 0        ;
@@ -492,7 +492,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Sep 09 22:13:38 2022
+    Info: Processing started: Fri Sep 16 23:43:35 2022
 Info: Command: quartus_sta proyecto3 -c proyecto3
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -511,80 +511,80 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.285
+Info (332146): Worst-case setup slack is -3.412
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.285             -32.988 divisor:N1|cuenta[10] 
-    Info (332119):    -2.142             -33.430 reloj 
-    Info (332119):    -0.185              -0.628 divisor:N2|cuenta[23] 
-Info (332146): Worst-case hold slack is 0.355
+    Info (332119):    -3.412             -32.497 divisor:N1|cuenta[10] 
+    Info (332119):    -2.287             -33.540 reloj 
+    Info (332119):    -2.159            -114.146 divisor:N2|cuenta[23] 
+Info (332146): Worst-case hold slack is 0.348
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.355               0.000 reloj 
-    Info (332119):     0.455               0.000 divisor:N2|cuenta[23] 
-    Info (332119):     0.638               0.000 divisor:N1|cuenta[10] 
+    Info (332119):     0.348               0.000 divisor:N2|cuenta[23] 
+    Info (332119):     0.356               0.000 reloj 
+    Info (332119):     0.639               0.000 divisor:N1|cuenta[10] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -38.075 reloj 
+    Info (332119):    -1.403             -85.583 divisor:N2|cuenta[23] 
     Info (332119):    -1.403             -22.448 divisor:N1|cuenta[10] 
-    Info (332119):    -1.403             -19.642 divisor:N2|cuenta[23] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.946
+Info (332146): Worst-case setup slack is -2.957
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.946             -28.649 divisor:N1|cuenta[10] 
-    Info (332119):    -1.829             -27.823 reloj 
-    Info (332119):    -0.080              -0.143 divisor:N2|cuenta[23] 
-Info (332146): Worst-case hold slack is 0.320
+    Info (332119):    -2.957             -27.870 divisor:N1|cuenta[10] 
+    Info (332119):    -1.938             -27.861 reloj 
+    Info (332119):    -1.872             -98.914 divisor:N2|cuenta[23] 
+Info (332146): Worst-case hold slack is 0.312
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.320               0.000 reloj 
-    Info (332119):     0.417               0.000 divisor:N2|cuenta[23] 
-    Info (332119):     0.589               0.000 divisor:N1|cuenta[10] 
+    Info (332119):     0.312               0.000 divisor:N2|cuenta[23] 
+    Info (332119):     0.321               0.000 reloj 
+    Info (332119):     0.590               0.000 divisor:N1|cuenta[10] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -38.075 reloj 
+    Info (332119):    -1.403             -85.583 divisor:N2|cuenta[23] 
     Info (332119):    -1.403             -22.448 divisor:N1|cuenta[10] 
-    Info (332119):    -1.403             -19.642 divisor:N2|cuenta[23] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.882
+Info (332146): Worst-case setup slack is -0.940
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.882              -2.407 reloj 
-    Info (332119):    -0.800              -5.648 divisor:N1|cuenta[10] 
-    Info (332119):     0.481               0.000 divisor:N2|cuenta[23] 
-Info (332146): Worst-case hold slack is 0.150
+    Info (332119):    -0.940              -2.439 reloj 
+    Info (332119):    -0.856              -5.909 divisor:N1|cuenta[10] 
+    Info (332119):    -0.376             -14.644 divisor:N2|cuenta[23] 
+Info (332146): Worst-case hold slack is 0.151
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.150               0.000 reloj 
-    Info (332119):     0.186               0.000 divisor:N2|cuenta[23] 
-    Info (332119):     0.248               0.000 divisor:N1|cuenta[10] 
+    Info (332119):     0.151               0.000 reloj 
+    Info (332119):     0.152               0.000 divisor:N2|cuenta[23] 
+    Info (332119):     0.247               0.000 divisor:N1|cuenta[10] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -28.737 reloj 
+    Info (332119):    -3.000             -28.727 reloj 
+    Info (332119):    -1.000             -61.000 divisor:N2|cuenta[23] 
     Info (332119):    -1.000             -16.000 divisor:N1|cuenta[10] 
-    Info (332119):    -1.000             -14.000 divisor:N2|cuenta[23] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4959 megabytes
-    Info: Processing ended: Fri Sep 09 22:13:42 2022
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 4962 megabytes
+    Info: Processing ended: Fri Sep 16 23:43:38 2022
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 
 

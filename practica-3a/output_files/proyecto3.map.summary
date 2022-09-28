@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri Sep 09 22:13:17 2022
+Analysis & Synthesis Status : Successful - Fri Sep 16 23:43:16 2022
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : proyecto3
 Top-level Entity Name : proyecto3
 Family : MAX 10
-Total logic elements : 110
-    Total combinational functions : 102
-    Dedicated logic registers : 55
-Total registers : 55
+Total logic elements : 239
+    Total combinational functions : 239
+    Dedicated logic registers : 102
+Total registers : 102
 Total pins : 9
 Total virtual pins : 0
 Total memory bits : 0

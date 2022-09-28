@@ -1,5 +1,5 @@
 Flow report for proyecto3
-Fri Sep 09 22:13:42 2022
+Fri Sep 16 22:53:28 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Sep 09 22:13:37 2022       ;
+; Flow Status                        ; Successful - Fri Sep 16 22:53:24 2022       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; proyecto3                                   ;
 ; Top-level Entity Name              ; proyecto3                                   ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 104 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 103 / 49,760 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 55 / 49,760 ( < 1 % )                       ;
-; Total registers                    ; 55                                          ;
+; Total logic elements               ; 147 / 49,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 135 / 49,760 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 97 / 49,760 ( < 1 % )                       ;
+; Total registers                    ; 97                                          ;
 ; Total pins                         ; 9 / 360 ( 3 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/09/2022 22:13:05 ;
+; Start date & time ; 09/16/2022 22:52:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; proyecto3           ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 198112238851378.166277958416060        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 198112238851378.166338677503040        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
@@ -96,11 +96,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 4850 MB             ; 00:00:27                           ;
-; Fitter                    ; 00:00:14     ; 1.1                     ; 6598 MB             ; 00:00:22                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4676 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.1                     ; 4959 MB             ; 00:00:04                           ;
-; Total                     ; 00:00:35     ; --                      ; --                  ; 00:00:56                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 4858 MB             ; 00:00:29                           ;
+; Fitter                    ; 00:00:11     ; 1.1                     ; 6605 MB             ; 00:00:27                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4676 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.1                     ; 4956 MB             ; 00:00:03                           ;
+; Total                     ; 00:00:30     ; --                      ; --                  ; 00:01:02                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

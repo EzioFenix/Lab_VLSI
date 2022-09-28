@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proyecto3
-Fri Sep 09 22:13:17 2022
+Fri Sep 16 23:43:16 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -16,11 +16,12 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Inverted Register Statistics
- 11. Parameter Settings for User Entity Instance: divisor:N1
- 12. Parameter Settings for User Entity Instance: divisor:N2
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: divisor:N1
+ 13. Parameter Settings for User Entity Instance: divisor:N2
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -46,15 +47,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Sep 09 22:13:17 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 16 23:43:16 2022       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; proyecto3                                   ;
 ; Top-level Entity Name              ; proyecto3                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 110                                         ;
-;     Total combinational functions  ; 102                                         ;
-;     Dedicated logic registers      ; 55                                          ;
-; Total registers                    ; 55                                          ;
+; Total logic elements               ; 239                                         ;
+;     Total combinational functions  ; 239                                         ;
+;     Dedicated logic registers      ; 102                                         ;
+; Total registers                    ; 102                                         ;
 ; Total pins                         ; 9                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -169,47 +170,47 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                          ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                   ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
-; proyecto3.vhd                    ; yes             ; User VHDL File  ; C:/Proyectos/Lab_VLSI/Practica 3/proyecto3.vhd ;         ;
-; PWM.vhd                          ; yes             ; User VHDL File  ; C:/Proyectos/Lab_VLSI/Practica 3/PWM.vhd       ;         ;
-; divisor.vhd                      ; yes             ; User VHDL File  ; C:/Proyectos/Lab_VLSI/Practica 3/divisor.vhd   ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                    ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
+; proyecto3.vhd                    ; yes             ; User VHDL File  ; C:/Proyectos/Lab_VLSI/practica-3a/proyecto3.vhd ;         ;
+; PWM.vhd                          ; yes             ; User VHDL File  ; C:/Proyectos/Lab_VLSI/practica-3a/PWM.vhd       ;         ;
+; divisor.vhd                      ; yes             ; User VHDL File  ; C:/Proyectos/Lab_VLSI/practica-3a/divisor.vhd   ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 110         ;
-;                                             ;             ;
-; Total combinational functions               ; 102         ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 35          ;
-;     -- 3 input functions                    ; 11          ;
-;     -- <=2 input functions                  ; 56          ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 58          ;
-;     -- arithmetic mode                      ; 44          ;
-;                                             ;             ;
-; Total registers                             ; 55          ;
-;     -- Dedicated logic registers            ; 55          ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 9           ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; reloj~input ;
-; Maximum fan-out                             ; 25          ;
-; Total fan-out                               ; 401         ;
-; Average fan-out                             ; 2.29        ;
-+---------------------------------------------+-------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 239   ;
+;                                             ;       ;
+; Total combinational functions               ; 239   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 53    ;
+;     -- 3 input functions                    ; 98    ;
+;     -- <=2 input functions                  ; 88    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 139   ;
+;     -- arithmetic mode                      ; 100   ;
+;                                             ;       ;
+; Total registers                             ; 102   ;
+;     -- Dedicated logic registers            ; 102   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 9     ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; flag  ;
+; Maximum fan-out                             ; 64    ;
+; Total fan-out                               ; 898   ;
+; Average fan-out                             ; 2.50  ;
++---------------------------------------------+-------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -217,139 +218,100 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name   ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+-------------+--------------+
-; |proyecto3                 ; 102 (6)             ; 55 (14)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 9    ; 0            ; 0          ; |proyecto3            ; proyecto3   ; work         ;
+; |proyecto3                 ; 239 (126)           ; 102 (61)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 9    ; 0            ; 0          ; |proyecto3            ; proyecto3   ; work         ;
 ;    |PWM:P1|                ; 16 (16)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|PWM:P1     ; PWM         ; work         ;
 ;    |PWM:P2|                ; 15 (15)             ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|PWM:P2     ; PWM         ; work         ;
 ;    |PWM:P3|                ; 8 (8)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|PWM:P3     ; PWM         ; work         ;
-;    |PWM:P4|                ; 6 (6)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|PWM:P4     ; PWM         ; work         ;
-;    |PWM:P5|                ; 6 (6)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|PWM:P5     ; PWM         ; work         ;
-;    |PWM:P6|                ; 4 (4)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|PWM:P6     ; PWM         ; work         ;
-;    |PWM:P7|                ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|PWM:P7     ; PWM         ; work         ;
-;    |PWM:P8|                ; 4 (4)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|PWM:P8     ; PWM         ; work         ;
+;    |PWM:P4|                ; 8 (8)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|PWM:P4     ; PWM         ; work         ;
+;    |PWM:P5|                ; 8 (8)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|PWM:P5     ; PWM         ; work         ;
+;    |PWM:P6|                ; 8 (8)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|PWM:P6     ; PWM         ; work         ;
+;    |PWM:P7|                ; 8 (8)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|PWM:P7     ; PWM         ; work         ;
+;    |PWM:P8|                ; 8 (8)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|PWM:P8     ; PWM         ; work         ;
 ;    |divisor:N1|            ; 10 (10)             ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|divisor:N1 ; divisor     ; work         ;
 ;    |divisor:N2|            ; 24 (24)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proyecto3|divisor:N2 ; divisor     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+-----------------------------------------+----------------------------------------+
-; Register name                           ; Reason for Removal                     ;
-+-----------------------------------------+----------------------------------------+
-; PWM:P2|cuenta[7]                        ; Merged with PWM:P1|cuenta[7]           ;
-; PWM:P3|cuenta[7]                        ; Merged with PWM:P1|cuenta[7]           ;
-; PWM:P4|cuenta[7]                        ; Merged with PWM:P1|cuenta[7]           ;
-; PWM:P5|cuenta[7]                        ; Merged with PWM:P1|cuenta[7]           ;
-; PWM:P6|cuenta[7]                        ; Merged with PWM:P1|cuenta[7]           ;
-; PWM:P7|cuenta[7]                        ; Merged with PWM:P1|cuenta[7]           ;
-; PWM:P8|cuenta[7]                        ; Merged with PWM:P1|cuenta[7]           ;
-; PWM:P2|cuenta[6]                        ; Merged with PWM:P1|cuenta[6]           ;
-; PWM:P3|cuenta[6]                        ; Merged with PWM:P1|cuenta[6]           ;
-; PWM:P4|cuenta[6]                        ; Merged with PWM:P1|cuenta[6]           ;
-; PWM:P5|cuenta[6]                        ; Merged with PWM:P1|cuenta[6]           ;
-; PWM:P6|cuenta[6]                        ; Merged with PWM:P1|cuenta[6]           ;
-; PWM:P7|cuenta[6]                        ; Merged with PWM:P1|cuenta[6]           ;
-; PWM:P8|cuenta[6]                        ; Merged with PWM:P1|cuenta[6]           ;
-; PWM:P2|cuenta[5]                        ; Merged with PWM:P1|cuenta[5]           ;
-; PWM:P3|cuenta[5]                        ; Merged with PWM:P1|cuenta[5]           ;
-; PWM:P4|cuenta[5]                        ; Merged with PWM:P1|cuenta[5]           ;
-; PWM:P5|cuenta[5]                        ; Merged with PWM:P1|cuenta[5]           ;
-; PWM:P6|cuenta[5]                        ; Merged with PWM:P1|cuenta[5]           ;
-; PWM:P7|cuenta[5]                        ; Merged with PWM:P1|cuenta[5]           ;
-; PWM:P8|cuenta[5]                        ; Merged with PWM:P1|cuenta[5]           ;
-; PWM:P2|cuenta[4]                        ; Merged with PWM:P1|cuenta[4]           ;
-; PWM:P3|cuenta[4]                        ; Merged with PWM:P1|cuenta[4]           ;
-; PWM:P4|cuenta[4]                        ; Merged with PWM:P1|cuenta[4]           ;
-; PWM:P5|cuenta[4]                        ; Merged with PWM:P1|cuenta[4]           ;
-; PWM:P6|cuenta[4]                        ; Merged with PWM:P1|cuenta[4]           ;
-; PWM:P7|cuenta[4]                        ; Merged with PWM:P1|cuenta[4]           ;
-; PWM:P8|cuenta[4]                        ; Merged with PWM:P1|cuenta[4]           ;
-; PWM:P2|cuenta[3]                        ; Merged with PWM:P1|cuenta[3]           ;
-; PWM:P3|cuenta[3]                        ; Merged with PWM:P1|cuenta[3]           ;
-; PWM:P4|cuenta[3]                        ; Merged with PWM:P1|cuenta[3]           ;
-; PWM:P5|cuenta[3]                        ; Merged with PWM:P1|cuenta[3]           ;
-; PWM:P6|cuenta[3]                        ; Merged with PWM:P1|cuenta[3]           ;
-; PWM:P7|cuenta[3]                        ; Merged with PWM:P1|cuenta[3]           ;
-; PWM:P8|cuenta[3]                        ; Merged with PWM:P1|cuenta[3]           ;
-; PWM:P2|cuenta[2]                        ; Merged with PWM:P1|cuenta[2]           ;
-; PWM:P3|cuenta[2]                        ; Merged with PWM:P1|cuenta[2]           ;
-; PWM:P4|cuenta[2]                        ; Merged with PWM:P1|cuenta[2]           ;
-; PWM:P5|cuenta[2]                        ; Merged with PWM:P1|cuenta[2]           ;
-; PWM:P6|cuenta[2]                        ; Merged with PWM:P1|cuenta[2]           ;
-; PWM:P7|cuenta[2]                        ; Merged with PWM:P1|cuenta[2]           ;
-; PWM:P8|cuenta[2]                        ; Merged with PWM:P1|cuenta[2]           ;
-; PWM:P2|cuenta[1]                        ; Merged with PWM:P1|cuenta[1]           ;
-; PWM:P3|cuenta[1]                        ; Merged with PWM:P1|cuenta[1]           ;
-; PWM:P4|cuenta[1]                        ; Merged with PWM:P1|cuenta[1]           ;
-; PWM:P5|cuenta[1]                        ; Merged with PWM:P1|cuenta[1]           ;
-; PWM:P6|cuenta[1]                        ; Merged with PWM:P1|cuenta[1]           ;
-; PWM:P7|cuenta[1]                        ; Merged with PWM:P1|cuenta[1]           ;
-; PWM:P8|cuenta[1]                        ; Merged with PWM:P1|cuenta[1]           ;
-; PWM:P2|cuenta[0]                        ; Merged with PWM:P1|cuenta[0]           ;
-; PWM:P3|cuenta[0]                        ; Merged with PWM:P1|cuenta[0]           ;
-; PWM:P4|cuenta[0]                        ; Merged with PWM:P1|cuenta[0]           ;
-; PWM:P5|cuenta[0]                        ; Merged with PWM:P1|cuenta[0]           ;
-; PWM:P6|cuenta[0]                        ; Merged with PWM:P1|cuenta[0]           ;
-; PWM:P7|cuenta[0]                        ; Merged with PWM:P1|cuenta[0]           ;
-; PWM:P8|cuenta[0]                        ; Merged with PWM:P1|cuenta[0]           ;
-; a5[2]                                   ; Merged with a1[7]                      ;
-; a1[4]                                   ; Merged with a1[3]                      ;
-; a2[3,4]                                 ; Merged with a1[3]                      ;
-; a3[3,4]                                 ; Merged with a1[3]                      ;
-; a4[3,4]                                 ; Merged with a1[3]                      ;
-; a5[3,4]                                 ; Merged with a1[3]                      ;
-; a6[3,4]                                 ; Merged with a1[3]                      ;
-; a7[3,4]                                 ; Merged with a1[3]                      ;
-; a8[3,4]                                 ; Merged with a1[3]                      ;
-; a5[7]                                   ; Merged with a1[2]                      ;
-; a6[2]                                   ; Merged with a2[7]                      ;
-; a6[7]                                   ; Merged with a2[2]                      ;
-; a2[0]                                   ; Merged with a1[5]                      ;
-; a3[5]                                   ; Merged with a1[5]                      ;
-; a4[0]                                   ; Merged with a1[5]                      ;
-; a5[5]                                   ; Merged with a1[5]                      ;
-; a6[0]                                   ; Merged with a1[5]                      ;
-; a7[5]                                   ; Merged with a1[5]                      ;
-; a8[0]                                   ; Merged with a1[5]                      ;
-; a7[2]                                   ; Merged with a3[7]                      ;
-; a2[5]                                   ; Merged with a1[0]                      ;
-; a3[0]                                   ; Merged with a1[0]                      ;
-; a4[5]                                   ; Merged with a1[0]                      ;
-; a5[0]                                   ; Merged with a1[0]                      ;
-; a6[5]                                   ; Merged with a1[0]                      ;
-; a7[0]                                   ; Merged with a1[0]                      ;
-; a8[5]                                   ; Merged with a1[0]                      ;
-; a7[7]                                   ; Merged with a3[2]                      ;
-; a3[1]                                   ; Merged with a1[6]                      ;
-; a5[6]                                   ; Merged with a1[6]                      ;
-; a7[1]                                   ; Merged with a1[6]                      ;
-; a8[2]                                   ; Merged with a4[7]                      ;
-; a3[6]                                   ; Merged with a1[1]                      ;
-; a5[1]                                   ; Merged with a1[1]                      ;
-; a7[6]                                   ; Merged with a1[1]                      ;
-; a8[7]                                   ; Merged with a4[2]                      ;
-; a4[1]                                   ; Merged with a2[6]                      ;
-; a6[6]                                   ; Merged with a2[6]                      ;
-; a8[1]                                   ; Merged with a2[6]                      ;
-; a4[6]                                   ; Merged with a2[1]                      ;
-; a6[1]                                   ; Merged with a2[1]                      ;
-; a8[6]                                   ; Merged with a2[1]                      ;
-; a1[3]                                   ; Stuck at VCC due to stuck port data_in ;
-; divisor:N1|cuenta[0]                    ; Merged with divisor:N2|cuenta[0]       ;
-; divisor:N1|cuenta[1]                    ; Merged with divisor:N2|cuenta[1]       ;
-; divisor:N1|cuenta[2]                    ; Merged with divisor:N2|cuenta[2]       ;
-; divisor:N1|cuenta[3]                    ; Merged with divisor:N2|cuenta[3]       ;
-; divisor:N1|cuenta[4]                    ; Merged with divisor:N2|cuenta[4]       ;
-; divisor:N1|cuenta[5]                    ; Merged with divisor:N2|cuenta[5]       ;
-; divisor:N1|cuenta[6]                    ; Merged with divisor:N2|cuenta[6]       ;
-; divisor:N1|cuenta[7]                    ; Merged with divisor:N2|cuenta[7]       ;
-; divisor:N1|cuenta[8]                    ; Merged with divisor:N2|cuenta[8]       ;
-; divisor:N1|cuenta[9]                    ; Merged with divisor:N2|cuenta[9]       ;
-; divisor:N1|cuenta[11..27]               ; Lost fanout                            ;
-; divisor:N2|cuenta[24..27]               ; Lost fanout                            ;
-; Total Number of Removed Registers = 137 ;                                        ;
-+-----------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                        ;
++----------------------------------------+----------------------------------+
+; Register name                          ; Reason for Removal               ;
++----------------------------------------+----------------------------------+
+; PWM:P2|cuenta[7]                       ; Merged with PWM:P1|cuenta[7]     ;
+; PWM:P3|cuenta[7]                       ; Merged with PWM:P1|cuenta[7]     ;
+; PWM:P4|cuenta[7]                       ; Merged with PWM:P1|cuenta[7]     ;
+; PWM:P5|cuenta[7]                       ; Merged with PWM:P1|cuenta[7]     ;
+; PWM:P6|cuenta[7]                       ; Merged with PWM:P1|cuenta[7]     ;
+; PWM:P7|cuenta[7]                       ; Merged with PWM:P1|cuenta[7]     ;
+; PWM:P8|cuenta[7]                       ; Merged with PWM:P1|cuenta[7]     ;
+; PWM:P2|cuenta[6]                       ; Merged with PWM:P1|cuenta[6]     ;
+; PWM:P3|cuenta[6]                       ; Merged with PWM:P1|cuenta[6]     ;
+; PWM:P4|cuenta[6]                       ; Merged with PWM:P1|cuenta[6]     ;
+; PWM:P5|cuenta[6]                       ; Merged with PWM:P1|cuenta[6]     ;
+; PWM:P6|cuenta[6]                       ; Merged with PWM:P1|cuenta[6]     ;
+; PWM:P7|cuenta[6]                       ; Merged with PWM:P1|cuenta[6]     ;
+; PWM:P8|cuenta[6]                       ; Merged with PWM:P1|cuenta[6]     ;
+; PWM:P2|cuenta[5]                       ; Merged with PWM:P1|cuenta[5]     ;
+; PWM:P3|cuenta[5]                       ; Merged with PWM:P1|cuenta[5]     ;
+; PWM:P4|cuenta[5]                       ; Merged with PWM:P1|cuenta[5]     ;
+; PWM:P5|cuenta[5]                       ; Merged with PWM:P1|cuenta[5]     ;
+; PWM:P6|cuenta[5]                       ; Merged with PWM:P1|cuenta[5]     ;
+; PWM:P7|cuenta[5]                       ; Merged with PWM:P1|cuenta[5]     ;
+; PWM:P8|cuenta[5]                       ; Merged with PWM:P1|cuenta[5]     ;
+; PWM:P2|cuenta[4]                       ; Merged with PWM:P1|cuenta[4]     ;
+; PWM:P3|cuenta[4]                       ; Merged with PWM:P1|cuenta[4]     ;
+; PWM:P4|cuenta[4]                       ; Merged with PWM:P1|cuenta[4]     ;
+; PWM:P5|cuenta[4]                       ; Merged with PWM:P1|cuenta[4]     ;
+; PWM:P6|cuenta[4]                       ; Merged with PWM:P1|cuenta[4]     ;
+; PWM:P7|cuenta[4]                       ; Merged with PWM:P1|cuenta[4]     ;
+; PWM:P8|cuenta[4]                       ; Merged with PWM:P1|cuenta[4]     ;
+; PWM:P2|cuenta[3]                       ; Merged with PWM:P1|cuenta[3]     ;
+; PWM:P3|cuenta[3]                       ; Merged with PWM:P1|cuenta[3]     ;
+; PWM:P4|cuenta[3]                       ; Merged with PWM:P1|cuenta[3]     ;
+; PWM:P5|cuenta[3]                       ; Merged with PWM:P1|cuenta[3]     ;
+; PWM:P6|cuenta[3]                       ; Merged with PWM:P1|cuenta[3]     ;
+; PWM:P7|cuenta[3]                       ; Merged with PWM:P1|cuenta[3]     ;
+; PWM:P8|cuenta[3]                       ; Merged with PWM:P1|cuenta[3]     ;
+; PWM:P2|cuenta[2]                       ; Merged with PWM:P1|cuenta[2]     ;
+; PWM:P3|cuenta[2]                       ; Merged with PWM:P1|cuenta[2]     ;
+; PWM:P4|cuenta[2]                       ; Merged with PWM:P1|cuenta[2]     ;
+; PWM:P5|cuenta[2]                       ; Merged with PWM:P1|cuenta[2]     ;
+; PWM:P6|cuenta[2]                       ; Merged with PWM:P1|cuenta[2]     ;
+; PWM:P7|cuenta[2]                       ; Merged with PWM:P1|cuenta[2]     ;
+; PWM:P8|cuenta[2]                       ; Merged with PWM:P1|cuenta[2]     ;
+; PWM:P2|cuenta[1]                       ; Merged with PWM:P1|cuenta[1]     ;
+; PWM:P3|cuenta[1]                       ; Merged with PWM:P1|cuenta[1]     ;
+; PWM:P4|cuenta[1]                       ; Merged with PWM:P1|cuenta[1]     ;
+; PWM:P5|cuenta[1]                       ; Merged with PWM:P1|cuenta[1]     ;
+; PWM:P6|cuenta[1]                       ; Merged with PWM:P1|cuenta[1]     ;
+; PWM:P7|cuenta[1]                       ; Merged with PWM:P1|cuenta[1]     ;
+; PWM:P8|cuenta[1]                       ; Merged with PWM:P1|cuenta[1]     ;
+; PWM:P2|cuenta[0]                       ; Merged with PWM:P1|cuenta[0]     ;
+; PWM:P3|cuenta[0]                       ; Merged with PWM:P1|cuenta[0]     ;
+; PWM:P4|cuenta[0]                       ; Merged with PWM:P1|cuenta[0]     ;
+; PWM:P5|cuenta[0]                       ; Merged with PWM:P1|cuenta[0]     ;
+; PWM:P6|cuenta[0]                       ; Merged with PWM:P1|cuenta[0]     ;
+; PWM:P7|cuenta[0]                       ; Merged with PWM:P1|cuenta[0]     ;
+; PWM:P8|cuenta[0]                       ; Merged with PWM:P1|cuenta[0]     ;
+; a5[4]                                  ; Merged with a1[4]                ;
+; a6[4]                                  ; Merged with a2[4]                ;
+; a7[4]                                  ; Merged with a3[4]                ;
+; a8[4]                                  ; Merged with a4[4]                ;
+; divisor:N1|cuenta[0]                   ; Merged with divisor:N2|cuenta[0] ;
+; divisor:N1|cuenta[1]                   ; Merged with divisor:N2|cuenta[1] ;
+; divisor:N1|cuenta[2]                   ; Merged with divisor:N2|cuenta[2] ;
+; divisor:N1|cuenta[3]                   ; Merged with divisor:N2|cuenta[3] ;
+; divisor:N1|cuenta[4]                   ; Merged with divisor:N2|cuenta[4] ;
+; divisor:N1|cuenta[5]                   ; Merged with divisor:N2|cuenta[5] ;
+; divisor:N1|cuenta[6]                   ; Merged with divisor:N2|cuenta[6] ;
+; divisor:N1|cuenta[7]                   ; Merged with divisor:N2|cuenta[7] ;
+; divisor:N1|cuenta[8]                   ; Merged with divisor:N2|cuenta[8] ;
+; divisor:N1|cuenta[9]                   ; Merged with divisor:N2|cuenta[9] ;
+; divisor:N1|cuenta[11..27]              ; Lost fanout                      ;
+; divisor:N2|cuenta[24..27]              ; Lost fanout                      ;
+; Total Number of Removed Registers = 91 ;                                  ;
++----------------------------------------+----------------------------------+
 
 
 +------------------------------------------------------+
@@ -357,7 +319,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 55    ;
+; Total registers                              ; 102   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -367,20 +329,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; a1[1]                                  ; 7       ;
-; a1[2]                                  ; 5       ;
-; a1[0]                                  ; 7       ;
-; a2[2]                                  ; 4       ;
-; a2[1]                                  ; 5       ;
-; a3[2]                                  ; 3       ;
-; a4[2]                                  ; 4       ;
-; Total number of inverted registers = 7 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; a1[1]                                   ; 4       ;
+; a2[2]                                   ; 3       ;
+; a3[3]                                   ; 3       ;
+; a4[4]                                   ; 5       ;
+; a5[5]                                   ; 3       ;
+; a6[6]                                   ; 3       ;
+; a7[7]                                   ; 3       ;
+; a8[7]                                   ; 4       ;
+; a8[6]                                   ; 4       ;
+; a8[5]                                   ; 4       ;
+; a8[3]                                   ; 4       ;
+; a8[2]                                   ; 4       ;
+; a8[1]                                   ; 4       ;
+; a8[0]                                   ; 4       ;
+; Total number of inverted registers = 14 ;         ;
++-----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 46 bits   ; 92 LEs        ; 92 LEs               ; 0 LEs                  ; Yes        ; |proyecto3|a1[7]           ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |proyecto3|a1[1]           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +---------------------------------------------------------+
@@ -409,20 +388,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 9                           ;
-; cycloneiii_ff         ; 55                          ;
-;     plain             ; 55                          ;
-; cycloneiii_lcell_comb ; 102                         ;
-;     arith             ; 44                          ;
+; cycloneiii_ff         ; 102                         ;
+;     plain             ; 102                         ;
+; cycloneiii_lcell_comb ; 239                         ;
+;     arith             ; 100                         ;
 ;         2 data inputs ; 41                          ;
-;         3 data inputs ; 3                           ;
-;     normal            ; 58                          ;
-;         1 data inputs ; 11                          ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 35                          ;
+;         3 data inputs ; 59                          ;
+;     normal            ; 139                         ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 39                          ;
+;         4 data inputs ; 53                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.30                        ;
-; Average LUT depth     ; 3.20                        ;
+; Max LUT depth         ; 3.20                        ;
+; Average LUT depth     ; 2.43                        ;
 +-----------------------+-----------------------------+
 
 
@@ -441,35 +420,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Sep 09 22:13:04 2022
+    Info: Processing started: Fri Sep 16 23:43:04 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proyecto3 -c proyecto3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file proyecto3.vhd
-    Info (12022): Found design unit 1: proyecto3-behavioral File: C:/Proyectos/Lab_VLSI/Practica 3/proyecto3.vhd Line: 14
-    Info (12023): Found entity 1: proyecto3 File: C:/Proyectos/Lab_VLSI/Practica 3/proyecto3.vhd Line: 6
+    Info (12022): Found design unit 1: proyecto3-behavioral File: C:/Proyectos/Lab_VLSI/practica-3a/proyecto3.vhd Line: 18
+    Info (12023): Found entity 1: proyecto3 File: C:/Proyectos/Lab_VLSI/practica-3a/proyecto3.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file pwm.vhd
-    Info (12022): Found design unit 1: PWM-behavioral File: C:/Proyectos/Lab_VLSI/Practica 3/PWM.vhd Line: 12
-    Info (12023): Found entity 1: PWM File: C:/Proyectos/Lab_VLSI/Practica 3/PWM.vhd Line: 6
+    Info (12022): Found design unit 1: PWM-behavioralPWM File: C:/Proyectos/Lab_VLSI/practica-3a/PWM.vhd Line: 12
+    Info (12023): Found entity 1: PWM File: C:/Proyectos/Lab_VLSI/practica-3a/PWM.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file divisor.vhd
-    Info (12022): Found design unit 1: divisor-behavioral File: C:/Proyectos/Lab_VLSI/Practica 3/divisor.vhd Line: 11
-    Info (12023): Found entity 1: divisor File: C:/Proyectos/Lab_VLSI/Practica 3/divisor.vhd Line: 5
+    Info (12022): Found design unit 1: divisor-behavioral File: C:/Proyectos/Lab_VLSI/practica-3a/divisor.vhd Line: 12
+    Info (12023): Found entity 1: divisor File: C:/Proyectos/Lab_VLSI/practica-3a/divisor.vhd Line: 6
 Info (12127): Elaborating entity "proyecto3" for the top level hierarchy
-Info (12128): Elaborating entity "divisor" for hierarchy "divisor:N1" File: C:/Proyectos/Lab_VLSI/Practica 3/proyecto3.vhd Line: 38
-Info (12128): Elaborating entity "divisor" for hierarchy "divisor:N2" File: C:/Proyectos/Lab_VLSI/Practica 3/proyecto3.vhd Line: 39
-Info (12128): Elaborating entity "PWM" for hierarchy "PWM:P1" File: C:/Proyectos/Lab_VLSI/Practica 3/proyecto3.vhd Line: 40
+Info (12128): Elaborating entity "divisor" for hierarchy "divisor:N1" File: C:/Proyectos/Lab_VLSI/practica-3a/proyecto3.vhd Line: 45
+Info (12128): Elaborating entity "divisor" for hierarchy "divisor:N2" File: C:/Proyectos/Lab_VLSI/practica-3a/proyecto3.vhd Line: 46
+Info (12128): Elaborating entity "PWM" for hierarchy "PWM:P1" File: C:/Proyectos/Lab_VLSI/practica-3a/proyecto3.vhd Line: 47
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 21 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 127 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 256 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 118 logic cells
+    Info (21061): Implemented 247 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4850 megabytes
-    Info: Processing ended: Fri Sep 09 22:13:17 2022
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Fri Sep 16 23:43:16 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:28
 
 

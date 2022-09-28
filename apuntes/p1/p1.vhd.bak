@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+------------------------------------------------
+entity and1_when_else is
+	port (
+		a : in std_logic;
+		b : in std_logic;
+		y_o : out std_logic
+		);
+end and1_when_else;
+
+---------------------------
+
+architecture flujo of and1_when_else is begin
+	y_o<= a when b='1' else '0';
+
+end architecture flujo;

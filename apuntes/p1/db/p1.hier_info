@@ -1,0 +1,6 @@
+|p1
+a => y_o.DATAB
+b => y_o.OUTPUTSELECT
+y_o << y_o.DB_MAX_OUTPUT_PORT_TYPE
+
+
