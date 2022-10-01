@@ -1,0 +1,10 @@
+|p10
+entrada[0] => Mux0.IN3
+entrada[1] => Mux0.IN2
+entrada[2] => Mux0.IN1
+entrada[3] => Mux0.IN0
+selector[0] => Mux0.IN5
+selector[1] => Mux0.IN4
+salida << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
