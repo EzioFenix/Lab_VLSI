@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity p11 is
+	port (
+		selector: in std_logic_vector(3 downto 1);
+		salida : out std_logic_vector( 1 downto 0);
+		comprobador: out std_logic 
+	);
+
+end entity p11;
+
+
+architecture behavior of p11 is begin
+	
+	salida <= "11" when selector(3) else
+				 "10" when selector(2) else
+				 "01" when selector(1) else
+				 "00" when selector(0) else
+				 "00" when others;
+
+end architecture behavior;
