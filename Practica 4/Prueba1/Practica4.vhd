@@ -7,8 +7,9 @@ ENTITY Practica4 IS
 		CLK : IN STD_LOGIC;
 		COLUMNAS : IN std_logic_vector(3 DOWNTO 0);
 		FILAS : OUT std_logic_vector(3 DOWNTO 0);
-		BOTON_PRES : OUT std_logic_vector (3 DOWNTO 0);
-		IND : OUT std_logic
+		BOTON_PRES : inout std_logic_vector (3 DOWNTO 0);
+		IND : OUT std_logic;
+		LED_out : OUT std_logic_vector(6 downto 0)
 	);
 END Practica4;
 ARCHITECTURE behavioral OF Practica4 IS
@@ -42,6 +43,7 @@ ARCHITECTURE behavioral OF Practica4 IS
 	--SIGNAL FILA : INTEGER RANGE 0 TO 3 := 0;
 	--SIGNAL IND_S : STD_LOGIC := '0';
 	--SIGNAL EDO : INTEGER RANGE 0 TO 1 := 0;
+	--agregado-_-------
 BEGIN
 	FILAS <= FILA_REG_S;
 	--RETARDO 1 MS--
@@ -171,6 +173,26 @@ BEGIN
 								IND_S <= '0';
 							END IF;
 						END IF;
+						
+					case  BOTON_PRES is
+					 when "0000" => LED_out <= "0000001"; -- "0"     
+					 when "0001" => LED_out <= "1001111"; -- "1" 
+					 when "0010" => LED_out <= "0010010"; -- "2" 
+					 when "0011" => LED_out <= "0000110"; -- "3" 
+					 when "0100" => LED_out <= "1001100"; -- "4" 
+					 when "0101" => LED_out <= "0100100"; -- "5" 
+					 when "0110" => LED_out <= "0100000"; -- "6" 
+					 when "0111" => LED_out <= "0001111"; -- "7" 
+					 when "1000" => LED_out <= "0000000"; -- "8"     
+					 when "1001" => LED_out <= "0000100"; -- "9" 
+					 when "1010" => LED_out <= "0000010"; -- a
+					 when "1011" => LED_out <= "1100000"; -- b
+					 when "1100" => LED_out <= "0110001"; -- C
+					 when "1101" => LED_out <= "1000010"; -- d
+					 when "1110" => LED_out <= "0110000"; -- E
+					 when "1111" => LED_out <= "0111000"; -- F
+					 end case;
+					
 					END PROCESS;
 					-----------------------------
 					--ACTIVACIÓN PARA LA BANDERA UN CICLO DE RELOJ--
@@ -196,4 +218,6 @@ BEGIN
 							END IF;
 						END PROCESS;
 						--------------------------------------
+						
+						
 END behavioral;

@@ -1,0 +1,12 @@
+|p14
+entrada[0] => baux.IN1
+entrada[1] => baux.IN1
+entrada[2] => baux.IN0
+entrada[3] => baux.IN1
+entrada[3] => salida[3].DATAIN
+salida[0] <= baux.DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= baux.DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= baux.DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= entrada[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

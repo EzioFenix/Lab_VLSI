@@ -1,6 +1,6 @@
- -- Copyright (C) 2021  Intel Corporation. All rights reserved.
+ -- Copyright (C) 2017  Intel Corporation. All rights reserved.
  -- Your use of Intel Corporation's design tools, logic functions 
- -- and other software and tools, and any partner logic 
+ -- and other software and tools, and its AMPP partner logic 
  -- functions, and any output files from any of the foregoing 
  -- (including device programming or simulation files), and any 
  -- associated documentation or information are expressly subject 
@@ -10,8 +10,7 @@
  -- agreement, including, without limitation, that your use is for
  -- the sole purpose of programming logic devices manufactured by
  -- Intel and sold by Intel or its authorized distributors.  Please
- -- refer to the applicable agreement for further details, at
- -- https://fpgasoftware.intel.com/eula.
+ -- refer to the applicable agreement for further details.
  -- 
  -- This is a Quartus Prime output file. It is for reporting purposes only, and is
  -- not intended for use as a Quartus Prime input file. This file cannot be used
@@ -65,7 +64,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 CHIP  "Practica4"  ASSIGNED TO AN: 10M50DAF484C7G
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -77,10 +76,10 @@ RESERVED_INPUT               : A4        :        :                   :         
 RESERVED_INPUT               : A5        :        :                   :         : 8         :                
 RESERVED_INPUT               : A6        :        :                   :         : 8         :                
 RESERVED_INPUT               : A7        :        :                   :         : 7         :                
-BOTON_PRES[3]                : A8        : output : 2.5 V             :         : 7         : Y              
-BOTON_PRES[2]                : A9        : output : 2.5 V             :         : 7         : Y              
-BOTON_PRES[1]                : A10       : output : 2.5 V             :         : 7         : Y              
-IND                          : A11       : output : 2.5 V             :         : 7         : Y              
+BOTON_PRES[0]                : A8        : bidir  : 2.5 V             :         : 7         : Y              
+BOTON_PRES[1]                : A9        : bidir  : 2.5 V             :         : 7         : Y              
+BOTON_PRES[2]                : A10       : bidir  : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : A11       :        :                   :         : 7         :                
 RESERVED_INPUT               : A12       :        :                   :         : 7         :                
 RESERVED_INPUT               : A13       :        :                   :         : 7         :                
 RESERVED_INPUT               : A14       :        :                   :         : 7         :                
@@ -101,12 +100,12 @@ RESERVED_INPUT               : AA6       :        :                   :         
 RESERVED_INPUT               : AA7       :        :                   :         : 3         :                
 RESERVED_INPUT               : AA8       :        :                   :         : 3         :                
 RESERVED_INPUT               : AA9       :        :                   :         : 3         :                
-RESERVED_INPUT               : AA10      :        :                   :         : 3         :                
+COLUMNAS[2]                  : AA10      : input  : 2.5 V             :         : 3         : Y              
 RESERVED_INPUT               : AA11      :        :                   :         : 4         :                
 RESERVED_INPUT               : AA12      :        :                   :         : 4         :                
 RESERVED_INPUT               : AA13      :        :                   :         : 4         :                
 RESERVED_INPUT               : AA14      :        :                   :         : 4         :                
-RESERVED_INPUT               : AA15      :        :                   :         : 4         :                
+FILAS[3]                     : AA15      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AA16      :        :                   :         : 4         :                
 RESERVED_INPUT               : AA17      :        :                   :         : 4         :                
 GND                          : AA18      : gnd    :                   :         :           :                
@@ -126,7 +125,7 @@ RESERVED_INPUT               : AB9       :        :                   :         
 RESERVED_INPUT               : AB10      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB11      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB12      :        :                   :         : 4         :                
-RESERVED_INPUT               : AB13      :        :                   :         : 4         :                
+FILAS[1]                     : AB13      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AB14      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB15      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB16      :        :                   :         : 4         :                
@@ -145,8 +144,8 @@ GND                          : B6        : gnd    :                   :         
 RESERVED_INPUT               : B7        :        :                   :         : 8         :                
 RESERVED_INPUT               : B8        :        :                   :         : 7         :                
 GND                          : B9        : gnd    :                   :         :           :                
-BOTON_PRES[0]                : B10       : output : 2.5 V             :         : 7         : Y              
-RESERVED_INPUT               : B11       :        :                   :         : 7         :                
+BOTON_PRES[3]                : B10       : bidir  : 2.5 V             :         : 7         : Y              
+IND                          : B11       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : B12       :        :                   :         : 7         :                
 GND                          : B13       : gnd    :                   :         :           :                
 RESERVED_INPUT               : B14       :        :                   :         : 7         :                
@@ -171,10 +170,10 @@ RESERVED_INPUT               : C10       :        :                   :         
 RESERVED_INPUT               : C11       :        :                   :         : 7         :                
 RESERVED_INPUT               : C12       :        :                   :         : 7         :                
 RESERVED_INPUT               : C13       :        :                   :         : 7         :                
-RESERVED_INPUT               : C14       :        :                   :         : 7         :                
-RESERVED_INPUT               : C15       :        :                   :         : 7         :                
-RESERVED_INPUT               : C16       :        :                   :         : 7         :                
-RESERVED_INPUT               : C17       :        :                   :         : 7         :                
+LED_out[6]                   : C14       : output : 2.5 V             :         : 7         : Y              
+LED_out[4]                   : C15       : output : 2.5 V             :         : 7         : Y              
+LED_out[3]                   : C16       : output : 2.5 V             :         : 7         : Y              
+LED_out[0]                   : C17       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : C18       :        :                   :         : 7         :                
 RESERVED_INPUT               : C19       :        :                   :         : 7         :                
 RESERVED_INPUT               : C20       :        :                   :         : 6         :                
@@ -196,7 +195,7 @@ RESERVED_INPUT               : D13       :        :                   :         
 RESERVED_INPUT               : D14       :        :                   :         : 7         :                
 RESERVED_INPUT               : D15       :        :                   :         : 7         :                
 GND                          : D16       : gnd    :                   :         :           :                
-RESERVED_INPUT               : D17       :        :                   :         : 7         :                
+LED_out[1]                   : D17       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : D18       :        :                   :         : 6         :                
 RESERVED_INPUT               : D19       :        :                   :         : 6         :                
 GND                          : D20       : gnd    :                   :         :           :                
@@ -216,8 +215,8 @@ RESERVED_INPUT               : E11       :        :                   :         
 RESERVED_INPUT               : E12       :        :                   :         : 7         :                
 RESERVED_INPUT               : E13       :        :                   :         : 7         :                
 RESERVED_INPUT               : E14       :        :                   :         : 7         :                
-RESERVED_INPUT               : E15       :        :                   :         : 7         :                
-RESERVED_INPUT               : E16       :        :                   :         : 7         :                
+LED_out[5]                   : E15       : output : 2.5 V             :         : 7         : Y              
+LED_out[2]                   : E16       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : E17       :        :                   :         : 6         :                
 RESERVED_INPUT               : E18       :        :                   :         : 6         :                
 RESERVED_INPUT               : E19       :        :                   :         : 6         :                
@@ -494,10 +493,10 @@ RESERVED_INPUT               : V3        :        :                   :         
 RESERVED_INPUT               : V4        :        :                   :         : 3         :                
 RESERVED_INPUT               : V5        :        :                   :         : 3         :                
 GND                          : V6        : gnd    :                   :         :           :                
-FILAS[0]                     : V7        : output : 2.5 V             :         : 3         : Y              
-FILAS[1]                     : V8        : output : 2.5 V             :         : 3         : Y              
-FILAS[2]                     : V9        : output : 2.5 V             :         : 3         : Y              
-FILAS[3]                     : V10       : output : 2.5 V             :         : 3         : Y              
+RESERVED_INPUT               : V7        :        :                   :         : 3         :                
+RESERVED_INPUT               : V8        :        :                   :         : 3         :                
+RESERVED_INPUT               : V9        :        :                   :         : 3         :                
+RESERVED_INPUT               : V10       :        :                   :         : 3         :                
 RESERVED_INPUT               : V11       :        :                   :         : 4         :                
 RESERVED_INPUT               : V12       :        :                   :         : 4         :                
 RESERVED_INPUT               : V13       :        :                   :         : 4         :                
@@ -516,13 +515,13 @@ RESERVED_INPUT               : W3        :        :                   :         
 RESERVED_INPUT               : W4        :        :                   :         : 3         :                
 RESERVED_INPUT               : W5        :        :                   :         : 3         :                
 RESERVED_INPUT               : W6        :        :                   :         : 3         :                
-COLUMNAS[0]                  : W7        : input  : 2.5 V             :         : 3         : Y              
-COLUMNAS[1]                  : W8        : input  : 2.5 V             :         : 3         : Y              
-COLUMNAS[2]                  : W9        : input  : 2.5 V             :         : 3         : Y              
-COLUMNAS[3]                  : W10       : input  : 2.5 V             :         : 3         : Y              
-RESERVED_INPUT               : W11       :        :                   :         : 4         :                
+RESERVED_INPUT               : W7        :        :                   :         : 3         :                
+RESERVED_INPUT               : W8        :        :                   :         : 3         :                
+RESERVED_INPUT               : W9        :        :                   :         : 3         :                
+RESERVED_INPUT               : W10       :        :                   :         : 3         :                
+COLUMNAS[3]                  : W11       : input  : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : W12       :        :                   :         : 4         :                
-RESERVED_INPUT               : W13       :        :                   :         : 4         :                
+FILAS[2]                     : W13       : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : W14       :        :                   :         : 4         :                
 RESERVED_INPUT               : W15       :        :                   :         : 4         :                
 RESERVED_INPUT               : W16       :        :                   :         : 4         :                
@@ -538,11 +537,11 @@ RESERVED_INPUT               : Y3        :        :                   :         
 RESERVED_INPUT               : Y4        :        :                   :         : 3         :                
 RESERVED_INPUT               : Y5        :        :                   :         : 3         :                
 RESERVED_INPUT               : Y6        :        :                   :         : 3         :                
-RESERVED_INPUT               : Y7        :        :                   :         : 3         :                
-RESERVED_INPUT               : Y8        :        :                   :         : 3         :                
+COLUMNAS[0]                  : Y7        : input  : 2.5 V             :         : 3         : Y              
+COLUMNAS[1]                  : Y8        : input  : 2.5 V             :         : 3         : Y              
 GND                          : Y9        : gnd    :                   :         :           :                
 RESERVED_INPUT               : Y10       :        :                   :         : 3         :                
-RESERVED_INPUT               : Y11       :        :                   :         : 4         :                
+FILAS[0]                     : Y11       : output : 2.5 V             :         : 4         : Y              
 GND                          : Y12       : gnd    :                   :         :           :                
 RESERVED_INPUT               : Y13       :        :                   :         : 4         :                
 RESERVED_INPUT               : Y14       :        :                   :         : 4         :                

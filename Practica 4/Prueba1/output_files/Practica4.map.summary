@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Sep 22 18:55:07 2022
-Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Mon Oct 03 23:20:29 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Practica4
 Top-level Entity Name : Practica4
 Family : MAX 10
-Total logic elements : 250
-    Total combinational functions : 121
+Total logic elements : 259
+    Total combinational functions : 130
     Dedicated logic registers : 165
 Total registers : 165
-Total pins : 14
+Total pins : 21
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

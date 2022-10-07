@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Sep 22 18:55:17 2022
-Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Fitter Status : Successful - Mon Oct 03 23:20:41 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Practica4
 Top-level Entity Name : Practica4
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 221 / 49,760 ( < 1 % )
-    Total combinational functions : 122 / 49,760 ( < 1 % )
+Total logic elements : 236 / 49,760 ( < 1 % )
+    Total combinational functions : 131 / 49,760 ( < 1 % )
     Dedicated logic registers : 165 / 49,760 ( < 1 % )
 Total registers : 165
-Total pins : 14 / 360 ( 4 % )
+Total pins : 21 / 360 ( 6 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 10M50DAF484C7G
 set_global_assignment -name TOP_LEVEL_ENTITY Practica4
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:25:53  SEPTEMBER 22, 2022"
-set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -52,19 +52,19 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_P11 -to CLK
-set_location_assignment PIN_A8 -to BOTON_PRES[3]
-set_location_assignment PIN_A9 -to BOTON_PRES[2]
-set_location_assignment PIN_A10 -to BOTON_PRES[1]
-set_location_assignment PIN_B10 -to BOTON_PRES[0]
-set_location_assignment PIN_W10 -to COLUMNAS[3]
-set_location_assignment PIN_W9 -to COLUMNAS[2]
-set_location_assignment PIN_W8 -to COLUMNAS[1]
-set_location_assignment PIN_W7 -to COLUMNAS[0]
-set_location_assignment PIN_V10 -to FILAS[3]
-set_location_assignment PIN_V9 -to FILAS[2]
-set_location_assignment PIN_V8 -to FILAS[1]
-set_location_assignment PIN_V7 -to FILAS[0]
-set_location_assignment PIN_A11 -to IND
+set_location_assignment PIN_B10 -to BOTON_PRES[3]
+set_location_assignment PIN_A10 -to BOTON_PRES[2]
+set_location_assignment PIN_A9 -to BOTON_PRES[1]
+set_location_assignment PIN_A8 -to BOTON_PRES[0]
+set_location_assignment PIN_W11 -to COLUMNAS[3]
+set_location_assignment PIN_AA10 -to COLUMNAS[2]
+set_location_assignment PIN_Y8 -to COLUMNAS[1]
+set_location_assignment PIN_Y7 -to COLUMNAS[0]
+set_location_assignment PIN_AA15 -to FILAS[3]
+set_location_assignment PIN_W13 -to FILAS[2]
+set_location_assignment PIN_AB13 -to FILAS[1]
+set_location_assignment PIN_Y11 -to FILAS[0]
+set_location_assignment PIN_B11 -to IND
 set_global_assignment -name ENABLE_OCT_DONE OFF
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
@@ -73,4 +73,11 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_location_assignment PIN_C14 -to LED_out[6]
+set_location_assignment PIN_E15 -to LED_out[5]
+set_location_assignment PIN_C15 -to LED_out[4]
+set_location_assignment PIN_C16 -to LED_out[3]
+set_location_assignment PIN_E16 -to LED_out[2]
+set_location_assignment PIN_D17 -to LED_out[1]
+set_location_assignment PIN_C17 -to LED_out[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

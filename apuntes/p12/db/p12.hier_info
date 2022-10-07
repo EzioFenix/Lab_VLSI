@@ -1,0 +1,24 @@
+|p12
+n_i[0] => LessThan0.IN8
+n_i[0] => a_o.DATAA
+n_i[0] => LessThan1.IN8
+n_i[0] => a_o.DATAB
+n_i[1] => Add0.IN6
+n_i[1] => LessThan0.IN7
+n_i[1] => LessThan1.IN7
+n_i[1] => a_o.DATAB
+n_i[2] => Add0.IN5
+n_i[2] => LessThan0.IN6
+n_i[2] => LessThan1.IN6
+n_i[2] => a_o.DATAB
+n_i[3] => Add0.IN4
+n_i[3] => LessThan0.IN5
+n_i[3] => LessThan1.IN5
+n_i[3] => a_o.DATAB
+a_o[0] << a_o.DB_MAX_OUTPUT_PORT_TYPE
+a_o[1] << a_o.DB_MAX_OUTPUT_PORT_TYPE
+a_o[2] << a_o.DB_MAX_OUTPUT_PORT_TYPE
+a_o[3] << a_o.DB_MAX_OUTPUT_PORT_TYPE
+error << LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+

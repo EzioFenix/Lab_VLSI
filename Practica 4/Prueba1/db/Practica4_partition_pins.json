@@ -20,6 +20,38 @@
 					"strict" : false
 				},
 				{
+					"name" : "IND",
+					"strict" : false
+				},
+				{
+					"name" : "LED_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_out[6]",
+					"strict" : false
+				},
+				{
 					"name" : "BOTON_PRES[0]",
 					"strict" : false
 				},
@@ -36,15 +68,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "IND",
-					"strict" : false
-				},
-				{
 					"name" : "CLK",
 					"strict" : false
 				},
 				{
-					"name" : "COLUMNAS[2]",
+					"name" : "COLUMNAS[1]",
 					"strict" : false
 				},
 				{
@@ -52,11 +80,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "COLUMNAS[0]",
+					"name" : "COLUMNAS[2]",
 					"strict" : false
 				},
 				{
-					"name" : "COLUMNAS[1]",
+					"name" : "COLUMNAS[0]",
 					"strict" : false
 				}
 			]
