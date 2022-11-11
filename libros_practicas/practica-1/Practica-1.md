@@ -8,7 +8,7 @@ Demostrar a los estudiantes que un FPGA las declaraciones concurrentes se  efect
 
 Utilizando un FPGA y 4 displays de 7 segmentos, diseñar un reloj digital, el cual visualice en los dos primeros displays las horas y en los siguientes dos, los minutos. La figura 1.1 muestra  el diagrama del bloque de un sistema.
 
-[[img]]
+![](./img/Practica-1/image-20221111163332718.png)
 
 Un FPGA puede configurarse con muchos bloques funcionales en lenguaje VHDL, que estén ejecutando acciones a la vez. A estas acciones ejecutándose acciones a la vez. A estas acciones a la vez. A estas acciones ejecutándose al mismo tiempo se le llama ejecución concurrente.
 
@@ -16,7 +16,7 @@ Las señales son declaraciones necesarias cuando se ejecutan las instrucciones c
 
 La figura 1.2 muestra los bloques funcionales del sistema reloj digital donde las señales se muestran con fleca de color azul.
 
-[[img]]
+![](./img/Practica-1/image-20221111163526524.png)
 
 La figura 1.3 muestra la entidad del sistema del reloj digital.
 
