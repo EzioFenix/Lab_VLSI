@@ -1,0 +1,14 @@
+|sumador
+a_i[0] => Add0.IN3
+a_i[1] => Add0.IN2
+a_i[2] => Add0.IN1
+b_i[0] => Add0.IN6
+b_i[1] => Add0.IN5
+b_i[2] => Add0.IN4
+c_i[0] => Add1.IN8
+sum_o[0] << Add1.DB_MAX_OUTPUT_PORT_TYPE
+sum_o[1] << Add1.DB_MAX_OUTPUT_PORT_TYPE
+sum_o[2] << Add1.DB_MAX_OUTPUT_PORT_TYPE
+co_o << Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
