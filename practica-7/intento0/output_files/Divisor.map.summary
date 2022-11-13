@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Fri Nov 11 23:43:15 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Divisor
+Top-level Entity Name : Divisor
+Family : MAX 10
+Total logic elements : 18
+    Total combinational functions : 18
+    Dedicated logic registers : 18
+Total registers : 18
+Total pins : 2
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
