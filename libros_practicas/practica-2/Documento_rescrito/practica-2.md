@@ -13,17 +13,19 @@ Utilizando un FPGA y 8 displays de 7 segmentos, diseñar un sistema digital que 
 
 La figura 2.1 muestra el diagrama de bloques del sistema registros de corrimiento en cascada.
 
-[[img]]
-
 Figura 2.1 Diagrama de bloques de sistema registros de corrimiento en cascada.
+
+## Diagramas de bloques
+
+![image-20221113011241906](img/practica-2/image-20221113011241906.png)
 
 Dentro del sistema digital registros de corrimiento en cascada se tienen varios bloques funcionales, los cuales internamente ejecutan instrucciones en forma secuencial. La figura 2.2 muestra los bloques funcionales del sistema.
 
-[[img]]
+![image-20221113011306592](img/practica-2/image-20221113011306592.png)
 
 Figura 2.2 Diagrama de bloques funcionales del sistema registros de corrimiento en cascada.
 
-La figura muestra la entidad del sistema registros de corrimiento en cascada.
+La figura 2.3 muestra la entidad del sistema registros de corrimiento en cascada.
 
 ```vhdl
 library IEEE;

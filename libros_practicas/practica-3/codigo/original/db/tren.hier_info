@@ -1,0 +1,14 @@
+|tren
+reloj => ~NO_FANOUT~
+alto => ~NO_FANOUT~
+sa => ~NO_FANOUT~
+sn => ~NO_FANOUT~
+emergencia => ~NO_FANOUT~
+estacion => ~NO_FANOUT~
+alto1 <= <VCC>
+alto2 <= <VCC>
+este <= <VCC>
+oeste <= <VCC>
+reset_FF1 <= <VCC>
+
+
