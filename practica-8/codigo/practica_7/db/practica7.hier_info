@@ -1,0 +1,73 @@
+|practica7
+clK => divIsOR:u1.cLk
+RESET => Pr_STaTe~3.DATAIN
+StoP => Selector1.IN4
+StoP => Selector2.IN3
+StoP => Selector3.IN3
+StoP => Selector4.IN3
+StoP => Selector5.IN3
+StoP => Selector6.IN3
+StoP => Selector7.IN3
+StoP => Selector8.IN3
+StoP => Selector12.IN4
+StoP => Selector13.IN3
+StoP => Selector14.IN3
+StoP => Selector15.IN3
+StoP => Selector11.IN1
+StoP => nx_STatE.DATAB
+StoP => Selector12.IN1
+StoP => Selector1.IN3
+StoP => Selector13.IN1
+StoP => Selector2.IN2
+StoP => Selector14.IN1
+StoP => Selector3.IN2
+StoP => Selector15.IN1
+StoP => Selector4.IN2
+StoP => Selector5.IN2
+StoP => Selector6.IN2
+StoP => Selector7.IN2
+StoP => Selector8.IN2
+dato_moTOr[0] << dato_moTOr[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dato_moTOr[1] << dato_moTOr[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dato_moTOr[2] << dato_moTOr[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dato_moTOr[3] << dato_moTOr[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seLecTor[0] => Equal0.IN3
+seLecTor[0] => Equal1.IN3
+seLecTor[0] => Equal2.IN3
+seLecTor[1] => Equal0.IN2
+seLecTor[1] => Equal1.IN2
+seLecTor[1] => Equal2.IN2
+
+
+|practica7|Divisor:u1
+CLK => cuenta[0].CLK
+CLK => cuenta[1].CLK
+CLK => cuenta[2].CLK
+CLK => cuenta[3].CLK
+CLK => cuenta[4].CLK
+CLK => cuenta[5].CLK
+CLK => cuenta[6].CLK
+CLK => cuenta[7].CLK
+CLK => cuenta[8].CLK
+CLK => cuenta[9].CLK
+CLK => cuenta[10].CLK
+CLK => cuenta[11].CLK
+CLK => cuenta[12].CLK
+CLK => cuenta[13].CLK
+CLK => cuenta[14].CLK
+CLK => cuenta[15].CLK
+CLK => cuenta[16].CLK
+CLK => cuenta[17].CLK
+CLK => cuenta[18].CLK
+CLK => cuenta[19].CLK
+CLK => cuenta[20].CLK
+CLK => cuenta[21].CLK
+CLK => cuenta[22].CLK
+CLK => cuenta[23].CLK
+CLK => cuenta[24].CLK
+CLK => cuenta[25].CLK
+CLK => cuenta[26].CLK
+CLK => cuenta[27].CLK
+clkl <= cuenta[17].DB_MAX_OUTPUT_PORT_TYPE
+
+

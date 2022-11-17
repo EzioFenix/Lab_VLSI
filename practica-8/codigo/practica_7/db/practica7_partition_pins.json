@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "dato_moTOr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dato_moTOr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dato_moTOr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dato_moTOr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seLecTor[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seLecTor[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "StoP",
+					"strict" : false
+				},
+				{
+					"name" : "clK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

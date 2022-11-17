@@ -1,0 +1,12 @@
+
+State Machine - |pRACTica7|Pr_STaTe
+Name Pr_STaTe.SiETE Pr_STaTe.sEIs Pr_STaTe.CINCO Pr_STaTe.CUaTro Pr_STaTe.trES Pr_STaTe.DOs Pr_STaTe.UNO Pr_STaTe.cERO Pr_STaTe.INiCia 
+Pr_STaTe.INiCia 0 0 0 0 0 0 0 0 0 
+Pr_STaTe.cERO 0 0 0 0 0 0 0 1 1 
+Pr_STaTe.UNO 0 0 0 0 0 0 1 0 1 
+Pr_STaTe.DOs 0 0 0 0 0 1 0 0 1 
+Pr_STaTe.trES 0 0 0 0 1 0 0 0 1 
+Pr_STaTe.CUaTro 0 0 0 1 0 0 0 0 1 
+Pr_STaTe.CINCO 0 0 1 0 0 0 0 0 1 
+Pr_STaTe.sEIs 0 1 0 0 0 0 0 0 1 
+Pr_STaTe.SiETE 1 0 0 0 0 0 0 0 1 

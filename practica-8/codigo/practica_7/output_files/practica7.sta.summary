@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'seLecTor[0]'
+Slack : -2.929
+TNS   : -10.685
+
+Type  : Slow 1200mV 85C Model Setup 'clK'
+Slack : -1.950
+TNS   : -20.362
+
+Type  : Slow 1200mV 85C Model Setup 'Divisor:u1|cuenta[17]'
+Slack : -1.419
+TNS   : -7.671
+
+Type  : Slow 1200mV 85C Model Hold 'Divisor:u1|cuenta[17]'
+Slack : -0.196
+TNS   : -0.753
+
+Type  : Slow 1200mV 85C Model Hold 'seLecTor[0]'
+Slack : -0.057
+TNS   : -0.057
+
+Type  : Slow 1200mV 85C Model Hold 'clK'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clK'
+Slack : -3.000
+TNS   : -28.254
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'seLecTor[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Divisor:u1|cuenta[17]'
+Slack : -1.403
+TNS   : -12.627
+
+Type  : Slow 1200mV 0C Model Setup 'seLecTor[0]'
+Slack : -2.861
+TNS   : -10.199
+
+Type  : Slow 1200mV 0C Model Setup 'clK'
+Slack : -1.638
+TNS   : -16.721
+
+Type  : Slow 1200mV 0C Model Setup 'Divisor:u1|cuenta[17]'
+Slack : -1.326
+TNS   : -6.721
+
+Type  : Slow 1200mV 0C Model Hold 'Divisor:u1|cuenta[17]'
+Slack : -0.131
+TNS   : -0.495
+
+Type  : Slow 1200mV 0C Model Hold 'seLecTor[0]'
+Slack : 0.057
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clK'
+Slack : 0.321
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clK'
+Slack : -3.000
+TNS   : -28.254
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'seLecTor[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Divisor:u1|cuenta[17]'
+Slack : -1.403
+TNS   : -12.627
+
+Type  : Fast 1200mV 0C Model Setup 'clK'
+Slack : -0.809
+TNS   : -0.873
+
+Type  : Fast 1200mV 0C Model Setup 'seLecTor[0]'
+Slack : -0.731
+TNS   : -2.537
+
+Type  : Fast 1200mV 0C Model Setup 'Divisor:u1|cuenta[17]'
+Slack : -0.524
+TNS   : -2.753
+
+Type  : Fast 1200mV 0C Model Hold 'seLecTor[0]'
+Slack : -0.342
+TNS   : -0.691
+
+Type  : Fast 1200mV 0C Model Hold 'Divisor:u1|cuenta[17]'
+Slack : -0.190
+TNS   : -0.877
+
+Type  : Fast 1200mV 0C Model Hold 'clK'
+Slack : 0.153
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clK'
+Slack : -3.000
+TNS   : -21.567
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'seLecTor[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Divisor:u1|cuenta[17]'
+Slack : -1.000
+TNS   : -9.000
+
+------------------------------------------------------------
