@@ -1,4 +1,5 @@
 ```
+<<<<<<< HEAD
 Practica 5 Diseño del control de intensidad en leds
 ```
 
@@ -29,3 +30,16 @@ Para el caso del módulo PWM no es necesario realizar modificación alguna el c�
 Ahora sólo falta construir el módulo principal, el cual se encargará de generar la secuencia que observará en los LEDs. La figura 5.4 muestra el código para el módulo Leds, el cual iría contenido en el archivo leds. Para probar el funcionamiento de estar práctica se utlizarán los LEDs de la tarjeta de desarrollo.
 
 Es importante notar el código que para cambiar la asignación de intensidadades no es necesario utilizar una variable auxiliar para evitar la pérdida de los valores, ya que aquí
+=======
+Practica 5. Diseño del control de intensida
+```
+
+# Objetivo:
+
+El alumno aprenderá a diseñar módulos con parámetros genéricos, lo que permitirá crear un proyecto con varias instancias de un mismo elemento pero con diferentes características de operación con el fin de dar mayor versatilidad a los módulos diseñados por el alumno.
+
+# Especificaciones
+
+Diseñar un circuito utilizando un FPGA que se encargue de controlar el encendido de cuatro LEDs cada una de los cuales encederá con diferente intensidad. La intentsidad de cada LED será controlada por medio del ciclo de rabajo de una señal PWM. Las luces  en los LEDs  cambiando  siguiendo una seucnecia determinada. La figura 5.1 muestra el diagrama del bloque de este sistema.
+
+>>>>>>> fce2066b44ab50a58b83b4d5b4ffdffdbd8284f8
