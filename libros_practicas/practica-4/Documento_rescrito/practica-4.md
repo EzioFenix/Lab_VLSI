@@ -1,167 +1,43 @@
 ```
-Practica: Diseño del control de motores a pasos
-No: 6
+Práctica 4 Diseño del control de servomotores
 ```
 
-# Objetivo
+## Objetivo
 
-El alumno aprenderá a diseñar el controlador de un motor a pasos mediante el uso e implementación de maquinas de estado.
+El alumno aprenderá la manera de organizar uno proyecto de manera modular y separarlo en diferentes archivos, con la finalidad de que vaya construyendo su propia biblioteca de módulos funcionales, y pueda reutilizar los módulos generados en otros proyectos.
 
 ## Especificaciones
 
-Diseñar el circuito de control  utilizando una FPGA, el cual se encargue de activar un motor a pasos bipolar con 4 líneas de control. Los movimientos que debe realizar el motor son en sentido a las manecillas del reloj, viceversa y detenido por medio de tres botones que controlan estos movimientos.
-
-La figura 6.1 muestra el diagrama de bloques del sistema.
+Diseñar el control de un servomotor de modelismo utilizando en un FPGA , en le cual por medio de cuatro interruptores de presión tipo push-buton, se pueda controlar la posición del eje del motor. Dos de los interruptores permitirán llevar el eje de cada una de las posiciones extremas, mientras que los otros permitirán  que el motor gire en cada dirección avanzando paso a paso a través de 12 posiciones defindas cada vez que el interruptor es presionado. La determinación de la posición se hará por medio de una señal PWM. La figura 4.1 muestra el diagrama del bloque de este sistema.
 
 ## Diagrama de bloques
 
 [[img]]
 
-## Tabla de estados
+En la elaboraciòn de un proyecto basado en un FPGA, comúmente se desarrollan gran cantidad de módulos funcionales para manejar las tareas necesarias en esa aplicación. Una buena práctica de diseño es la de utilizar cada uno de esos módulos de manera independiente, ya que esto simplifica el proceso de diseño y permite distribuir las diferentes tareas entre varios grupos de trabajo. Además, si se hace una buena divisón de tareas, al final se contará con un conjunto de módulos funcionales que eventualmente podrán ser reutilizadas en otros proyectos. De esta manera , al aplicar esta métodologia de diseño, el alumno podrá ir construyendo de su propia biblioteca de módulos funcionales, lo que en el futuro le permitirá reducir los timepos de diseño al utilizar estos módulos . Esto implica que cada módulo funcional debe setar contenido en un archivo diferente.
 
-La figura 6.2, muestra la tabla de estados, la cual está diseñada con 11 estados que inician en el estado SMO hasta el estado SM10. Por la cantidad de condiciones de entrada y estado está expresada por colores para cada estado, para una mejor compresión. En la figura 6.2. A se observa el Estado 0, Estado 1, Estado 2 y Estado 3. En la figura 6.2B se observa el Estado 4, Estado 5, Estado 6 y Estado 7. En la figura 6.2C se observa el Estado 8, Estado 9 y Estado 10.
+Para el desarrollo de esta práctica se aplicarár este concepto de divisón en módulos funcionales, cada uno de ellos contenidos en un archivo diferente, que posteriormente son integrados en un sólo proyecto al ser instanciados en el módulo principal. La figura 4.2 muesta los bloques funcionales que componen al control de servomotor.
+
+[[igm]]
+
+Para la elaboración de este proyecto, se diseñara dos módulos funcionales de aplicación genérica. el módulo Divisor y el módulo PWM, que podrán ser los dos primeros módulos funcionales de la biblioteca del alumno, además de módulo principal dedicado a la aplicación específica del control del servomotor controlado por cuatro interruptores, en donde se instanciarán los dos módulos de uso general.
+
+El primer módulo para diseñar es el correspondiente al divisor, el cuál generará, a partir de la señal de reloj de 50 [MHz] de la tarjeta de desarrollo, una señal de salida cuya frecuencia corresponde a dividir la señal de entrada, entre un potencia de 2. La frecuencia de salida estará definida por el valor de la constante N. En la figura 4.3 muestra el código para este módulo , el cual estará contenido en el archivo  divisor.
+
+[[code]]
+
+El siguiente módulo es que se encargará de generar una señal PWM. El ciclo de trabajo de la señal generada estará definido por el valor D, el cual tiene una resolución de 256 niveles, con una frecuencia correspondiente a 256 ciclos de reloj de entrada. La figura 4.4 muestra el código para el módulo PWM , el cual estará contenido en el archivo PWM.
 
 [[img]]
 
+Los dos módulos anteriores formarán parte de la biblioteca de módulos  funcionales de alumno, los cuales puede ser utilizados en cualquier otro proyecto en donde se requiera hacer una división de frecuencia o donde se requiera una señal PWM.
 
+Finalmente, el módulo principal de esta aplicación se encargará de detectar la actividad en los interruptores y a partir de ello definir el ciclo de trabajo de la señal PWM. Hay que recordar que un servomotor el modelismo típico se requiere que la señal de control tenga un período de 20ms, y que el ancho de pulso varíe en el rango de 1 a 2 ms, en donde el ancho del pulso determina la posición del eje del servomotor; este módulo debe asegurar que esto se cumpla. Por ello se eligió el bit 11 en el divisor de frecuencia, para tener en 256 ciclos aproximadamente los 20ms. El ancho del pulso de salida variará en el rango de 13 a 24 ciclos para tener el rango de 1 a 2 ms. Con esto el servomotor tendrá 12 posiciones que podrá adoptar en su recorrido. La figura 4.5 muestra el código para el módulo Servomotor, el cual estará contenido en el archivo servomotor.
 
-[[img]]
+[[code]]
 
+## Activades complementarias
 
-
-```vhdl
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;
-
-entity motpasos is
-	port(reloj : in std_logic;
-	ud: in std_logic;
-	rst: in std_logic;
-	fh: in std_logic_vector(1 downto 0);
-	led: out std_logic_vector(3 downto 0);
-	mot: out std_logic_vector(3 downto 0));
-end motpasos;
-
-architecture behavioral of motpasos is
-	signal divi: std_logic_vector(17 downto 0);
-	signal clks: std_logic;
-	type estado is(sm0,sm1,sm2,sm3,sm4,sm5,sm6,sm7,sm8,sm9,sm10);
-	signal pres_S, next_s: estado;
-	signal motor: std_logic_vector(3 downto 0);
-begin
-```
-
-En la figura 6.4 se observa el código del bloque Divisor de frecuencia.
-
-```vhdl
-process( reloj, rst)
-begin
-	if rst='0' then
-        div <= (others=>'0');
-    elsif reloj'event and reloj='1' then
-        div <=div +1;
-   end if;
-end process;
-clks <= div(17);
-      
-```
-
-En la Figura 6.5 se observa el código de las transiciones de estados.
-
-```vhdl
-process (clks,rst)
-begin
-	if rst='0' then
-		pres_s <= sm0;
-	elsif clksm	'event and clks='1' then
-	end if;
-end process;
-
-process (press_s, ud,rst,fh)
-begin
-	case(press_s) is
-		when sm0 => --estado 0
-			next_s <=sm1;
-		when sm1 => --estado 1
-			if fh ="00" then --motor bipolar
-		if ud='1' then
-			next_s<=sm3;
-		else
-			next_s <=sm7;
-		end if;
-	elsif fh="01" then
-		if ud='1' then
-			next_s <= sm8;
-		end if;
-	elsif fh="10" then
-		if ud='1' then
-			next_s <= sm2;
-		else
-		next_s <= sm8;
-	end if;
-	elsif fh="11" then
-		if ud='1' then
-			next_s <= sm9;
-		else
-		next_s <=sm4;
-	end if;
-else
-	next_s<= sm1;
-end if;
-when sm2 =>
-	if fh ="00" then
-		if ud='1' then 
-			next_s <= sm1;
-		else
-			next_s <=sm7;
-```
-
-```vhdl
-
-```
-
-
-
-```vhdl
-elsif fh="10" then
-    if ud='1' then
-        next_s <= sm1;
-   else
-       next_s <=sm8;
-    end if;
-elsif
-```
-
-
-
-```vhdl
-process(pres_s)
-begin
-	case pres_S is
-		when sm0 => motor <="0000";
-		when sm1 => motor <="1000";
-		when sm2 => motor <="1100";
-		when sm3 => motor <="0100";
-		when sm4 => motor <="0110";
-		when sm5 => motor <="0010";
-		when sm6 => motor <="0011";
-		when sm7 => motor <="0001";
-		when sm8 => motor <="1001";
-		when sm9 => motor <="1010";
-		when sm10 => motor <="0101";
-		when others => motor <="0000";
-	end case;
-end process;
-
-mot<= motor;
-led<= motor;
-
-end behavioral;
-```
-
-
-
-## Actividad complementaria
-
-El alumno deberá realizar las modificaciones pertinentes para poder girar el motor las vueltas necesarias que representen los dígitos de su número de cuenta,s e deben combinar los giros horarios, antihorario y detenido.
+1. Siguiendo la metodología de diseño presentada, el alumno elaborará un módulo funcional genérico para controlar un servomotor de modelismo, que complementará la biblioteca de módulos del alumno.
+2. Utilizando el módulo genérico para controlar un servomotor diseñado en el punto anterior, construir un sistema de haga que dos servomotores de modelismo se muevan de forma complementaria, es decir, se moverán de la misma forma, pero girando en dirección opuesta.
+3. Utilizando el módulo genérico para controlar un servomotor diseñado en el primer punto, construir un sistema que haga que dos servomotores de modelismo se muevan independientemente, cada uno de ellos controlado por dos interruptores de presión tipo push-boton, que al presionarlos harán avanzar o retroceder al eje del motor. 
