@@ -184,3 +184,37 @@ END ARCHITECTURE behaivoral;
 ## Actividad complementaria
 
 El alumno diseñará un sistema capaz de enviar el valor del switch en forma binaria, es decir cuatro caracteres, un por bit leído. La forma en que la secuencia de texto que deberá ser visualizado en la computadora es : **Valor binario=XXXX**, en donde XXXX representa el número de 4 bits. 
+
+# Desarrollo solución
+
+Primero realizamos la conexión del transmisor y por ello.
+
+## Diagrama de conexiones de jumpers
+
+![conexion](img/practica-8/conexion.jpg)
+
+En este caso le damos 5 Volts al emisor.
+
+
+
+# Explicación del funcionamiento
+
+1. Primero tenemos que conectarnos con la aplicación  de HC-05
+
+![image-20221120232208242](img/practica-8/image-20221120232208242.png)
+
+2. Cuando pida el código  de **1234** y conectarse.
+
+3. Estando adentro de la aplicación  podemos observar los cambios realizados en los switches, en el caso como son 4 bits podemos representar desde 0 hasta F que sería 15 en valor hexadecimal.
+
+   <img src="img/practica-8/app-1.jpg" alt="app-1" style="zoom:50%;" />
+
+Cambiando los swtiches van cambiando el valor en la pantalla  llegando  desde 0 hasta F.
+
+<img src="img/practica-8/app-2.jpg" alt="app-2" style="zoom:50%;" />
+
+## **Observaciones:**
+
+- El led  de la FPGA se esta prendiendo  cada cierto tiempo para indicar que esta mandando dato.
+
+## Solución actividades complementarias

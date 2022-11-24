@@ -50,4 +50,11 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_P11 -to reloj
+set_location_assignment PIN_A8 -to led
+set_location_assignment PIN_C12 -to sw[3]
+set_location_assignment PIN_D12 -to sw[2]
+set_location_assignment PIN_C11 -to sw[1]
+set_location_assignment PIN_C10 -to sw[0]
+set_location_assignment PIN_V5 -to tx_wire
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -123,7 +123,7 @@ sw[3] => Mux4.IN8
 sw[3] => Mux5.IN16
 sw[3] => Mux6.IN16
 sw[3] => Mux7.IN16
-led <= pulso.DB_MAX_OUTPUT_PORT_TYPE
-tx_wire <= tx_wire~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led << pulso.DB_MAX_OUTPUT_PORT_TYPE
+tx_wire << tx_wire~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
