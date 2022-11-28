@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "TX_WIRE",
+					"strict" : false
+				},
+				{
+					"name" : "led",
+					"strict" : false
+				},
+				{
+					"name" : "reloj",
+					"strict" : false
+				},
+				{
+					"name" : "swt[0]",
+					"strict" : false
+				},
+				{
+					"name" : "swt[1]",
+					"strict" : false
+				},
+				{
+					"name" : "swt[2]",
+					"strict" : false
+				},
+				{
+					"name" : "swt[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
