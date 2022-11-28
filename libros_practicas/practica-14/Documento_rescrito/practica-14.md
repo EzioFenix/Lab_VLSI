@@ -1,152 +1,57 @@
-```
-Práctica 2.
-Diseño de registros de corrimiento en cascada
-```
+# Bibliografía
 
-# Objetivo
+1. NE. Chávez. <u>Tutorial para prácticas en lenguaje VHDL</u> Facultad de ingeniería, UNAM. 2013.
+2. NE. Chávez, MS. Guevara, V. Flores. <u>Prácticas de Diseño Digital Moderno</u> Facultad de Ingeniería, UNAM. 2017.
+3. J. Savage, G. Vázquez, NE. Chávez.  <u>Diseño de Microporcesadores</u> Facultad de Ingeniería, UNAM. 2016.
+4. Pong. P. <u>FPGA prototyping by VHDL examples</u>. Willey intescience, pp. 163-182. 2015.
+5. Wilson P. <u>Design Recipes for FPGAs.</u> Newnes, Oxford, pp. 209-228. 2015.
+6. Pong P. Chu. <u>VGA Controller I: Graphic</u> Willey Online Library. 2015
+7. Ultrasonic Ranging Module HS-SR04 ElecFreaks Tech Support: <u>services @elecfreaks.com.</u> <u>https://cdn.sparkfun.com/datasheets/sensor/Proximity/HCSR04.pdf</u>
+8. Cámara. sensor OV7670 Omni Visión Technology Inc. Advanced Information. preliminary Datasheet. 0V76/0V7171CMOS VGA (640x480) CAMERA CHIP TM with Ommi Pixel (R) Tecnology. USA: Omni Visión Technologies, Inc. (2005-10)[2016-07].
+9. Altera Corporation <u>User configurable logic data book</u> Altera Corporation. Santa Clara 2015.
+10. Xilinx ISE (Integrated Synthesis Enviroment) <u>ISE Design Suite: WebPACK Edition</u> Xilinx Corporation. 2015.
+11. Coelho, David R. <u>The VHDL handbook</u> Kluwer Academic Publishers. Boston. 2011.
+12. Pardo, F. y Boluda, J. A. <u>VHDL. Lenguaje  para síntesis y modelado de circuitos. 3ª edición.</u> Alfaomega, México. 2011.
+13. Rodríguez Andina, J. J., de la Toree Arnanz, E. y Valdés Peña, M. D. <u>FPGAs Fundamentals, Advanced Features, and Applications in Industrial Electronics</u> CRC Press. Boca Raton. 201
 
-Demostrar a los estudiantes que las declaraciones secuenciales requieren de un orden para ser ejecutadas. Diseñar registros de corrimiento en cascada utilizando las estructuras de control `if-then-else` o case dentro de un proceso.
+# Glosario
 
-# Especificaciones
+**Almacenamiento**  Capacidad de un dispositivo electrónico para leer, escribir y guardar datos ya sea forma temporal o permanente.
 
-Utilizando un FPGA y 8 displays de 7 segmentos, diseñar un sistema digital que despliegue un mensaje que se desplace en los displays.
+**Alta impedancia** En los dispositivos que tienen tres estados, el estado de alta impedancia significa que sus salidas están desconectadas, por lo que tienen ningún valor.
 
-La figura 2.1 muestra el diagrama de bloques del sistema registros de corrimiento en cascada.
+**ALU** Unidad encargada de realizar las operaciones aritméticas y lógicas en cualquier sistema digital.
 
-[[img]]
+**AND** Operación lógica básica que produce una salida alta ("1" l)
 
-Figura 2.1 Diagrama de bloques de sistema registros de corrimiento en cascada.
+**ASCII** Abreviación de American Standar Code  for Information Interchange. Es código que permite representar caracteres y textos en formato binario, hexadecimal o decimal con una longitud por carácter de un byte.
 
-Dentro del sistema digital registros de corrimiento en cascada se tienen varios bloques funcionales, los cuales internamente ejecutan instrucciones en forma secuencial. La figura 2.2 muestra los bloques funcionales del sistema.
+**Astable** Circuito que posee dos estados casi estables entre los que se alterna cada cierto periodo de tiempo.
 
-[[img]]
+# B
 
-Figura 2.2 Diagrama de bloques funcionales del sistema registros de corrimiento en cascada.
+**Binario** Sistema que maneja dos diferentes valores.
 
-La figura muestra la entidad del sistema registros de corrimiento en cascada.
+**Bit** Elemento básico binario utilizado cualquier sistema digital.
 
-```vhdl
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.std_logic_arith.all;
-use IEEE.std_logic_unsigned.all;
+**Bloque funcional** Representación gráfica de los diferentes procesos que se tienen en un sistema digital.
 
-entity corri is
-	Port (
-		reloj: in stad_logic;
-		display1,display2,display3,display4,display5,display6,display7,display8: buffer std_logic_vector (6 downto 0)
-	);
-end corri;
-```
+**Bus** Elementos digital que tranfiere información entre un sistema a otro.
 
-La figura 2.4 muestra la parte declaratoria de la arquitectura del sistema registros de corrimiento en cascada.
+**Byte** A agrupación de 8 bits.
 
-```vhdl
-architecture Behavioral of corri is
-	signal segundo: std_logic;
-	signal Q: std_logic_vector (3 downto 0):="0000";
-```
+# C
 
-La figura 2.5 muestra la parte operatoria de la arquitectura del sistema registros de corrimiento en cascada.
+**Cámara digital** Dispositivo electrónico que permite tomar fotografías, teniendo el resultado de la imagen al instante.
 
-```vhdl
-begin
-	divisor: process(reloj)
-		variable cuenta: std_logic_vector(27 downto 0):=X"0000000";
-	begin
-		if rising_edge(reloj) then
-			if cuenta=X"48009E0" then
-				cuenta:=X"0000000";
-			else
-				cuenta:=cuenta +1;
-			end if;
-		end if;
-		segundo <= cuenta(22);
-end process;
+**Circuito integrado** Dispositivo electróncio con la capacidad de realizar alguna función específica.
 
-	contador: process (segundo)
-	begin
-		if risign_edge(segundo) then
-			Q<= Q+1;
-		end if;
-	end process;
-```
+**Circuitos Tres Estados** Circuito  Digital con la capacidad de tener diferentes tipos de salida: alto (uno lógico), bajo (cero lógico) y alta impedancia (salida desconectada).
 
+**Compilador** Es un programa que procesa y traduce las expresiones escritas en un lenguaje de programación en particular a otro lenguaje generalmente, a lenguaje a máquina.
 
+**Complemento a uno** Es el inverso u opuesto de un número. El complemento de uno es cero y de cero es uno. En álgebra booleana es la función inversa, la cual se expresa mediante un barra encima de la variable.
 
+**Comunicación serial** Forma en que transmite información (bytes) en un bit a vez. Típicamente se transmiten datos formato ASCII.
 
-
-```vhdl
-with Q select
-    display1 <= "0000110" when "0000", -- E
-             <= "0101011" when "0000", -- n
-             <= "1111111" when "0000", -- espacio
-             <= "1000111" when "0000", -- L
-             <= "0001000" when "0000", -- A
-             <= "1111111" when "0000", -- espacio
-             <= "1000000" when "0000", -- O
-             <= "0000111" when "0000", -- L
-             <= "0001000" when "0000", -- A
-             <= "1111111" when "0000", -- espacio
-
-FF1: process (segundo)
-begin
-	if rising_edge(segundo) then
-		display2 <= display1;
-	end if;
-end process;
-
-FF2: process (segundo)
-begin
-	if rising_edge (segundo) then
-		display3 <= display2;
-	end if;
-end process;
-
-FF3: process (segundo)
-begin
-	if rising_edge (segundo) then
-		display4 <= display3;
-	end if;
-end process;
-
-FF4: process (segundo)
-begin
-	if rising_edge (segundo) then
-		display5 <= display4;
-	end if;
-end process;
-
-FF5: process (segundo)
-begin
-	if rising_edge (segundo) then
-		display6 <= display5;
-	end if;
-end process;
-
-FF6: process (segundo)
-begin
-	if rising_edge (segundo) then
-		display7 <= display6;
-	end if;
-end process;
-```
-
-
-
-
-
-```vhdl
-FF7: process (segundo)
-begin
-	if rising_edge (segundo) then
-		display8 <= display7;
-	end if;
-end process;
-```
-
-# Actividad complementaria
-
-Diseñar un sistema que realice la venta de bebidas de  4 diferentes sabores, cada bebida vale $\$15$, se aceptan billetes de \$100, \$50,\$20 y monedas de \$1,\$2,\$5, \$10 y da cambio.
-
-Cuando el sistema esté encendido y nadie esté comprando se activará una grabación invitando a consumir esas bebidas.
+**Flip-flop tipo D** Dispositivo digital lógico, dispositivo 
