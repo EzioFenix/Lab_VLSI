@@ -14,11 +14,11 @@ La figura 11.1 muestra el diagrama de bloques del sistema y la figura 11.2 muest
 
 # Diagrama de bloques
 
-[[img]]
+![](img/practica-11/image-20221201084743586.png)
 
 ## Diagrama de bloques funcionales
 
-[[img]]
+![](img/practica-11/image-20221201084805959.png)
 
 La entidad del sistema emulador de display 7 segmentos en monitor se muestra en la figura 11.3.
 
