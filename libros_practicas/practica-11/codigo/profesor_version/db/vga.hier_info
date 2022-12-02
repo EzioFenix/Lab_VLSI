@@ -1,0 +1,29 @@
+|vga
+clk50Mhz => reloj_pixel.CLK
+o_red[0] <= <GND>
+o_red[1] <= <GND>
+o_red[2] <= <GND>
+o_red[3] <= <GND>
+o_green[0] <= <GND>
+o_green[1] <= <GND>
+o_green[2] <= <GND>
+o_green[3] <= <GND>
+o_blue[0] <= <GND>
+o_blue[1] <= <GND>
+o_blue[2] <= <GND>
+o_blue[3] <= <GND>
+h_sync <= h_sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+v_sync <= v_sync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dipsw[0] => ~NO_FANOUT~
+dipsw[1] => ~NO_FANOUT~
+dipsw[2] => ~NO_FANOUT~
+dipsw[3] => ~NO_FANOUT~
+A <= A.DB_MAX_OUTPUT_PORT_TYPE
+B <= B.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+D <= D.DB_MAX_OUTPUT_PORT_TYPE
+E <= E.DB_MAX_OUTPUT_PORT_TYPE
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

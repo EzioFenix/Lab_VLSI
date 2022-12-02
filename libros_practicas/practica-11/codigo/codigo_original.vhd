@@ -46,9 +46,100 @@ with dipsw select conectornum <= --decodificador para los nímeros
 "0000000" when others;
 
 ----- pag 72
+when uno =>
+	if((row > 210 and row 240) and
+		(column>140 and column<150)) then --B verde
+		red <= (others =< '0');
+		green <= (others => '1');
+		blue <= (others => '0');
+
+	elsif ((row >250 and row <280) and
+		(column >140 and column<150)) then --c rojo
+		red <= (others =< '1');
+		green <= (others => '0');
+		blue <= (others => '0');
+	else							--fondo
+		red <= (others =< '0');
+		green <= (others => '0');
+		blue <= (others => '0');
+	end if;
+
+when dos =>
+	if((row > 200 and row<210) and
+		(column>110 and column<140)) then --A azul
+		red <= (others =< '0');
+		green <= (others => '0');
+		blue <= (others => '1');
+
+	elsif ((row >210 and row <240) and
+		(column >140 and column<150)) then --B verde
+		red <= (others =< '0');
+		green <= (others => '1');
+		blue <= (others => '0');
+
 
 ----- pag 73
+elsif ((row >280 and row <290) and
+		(column >110 and column<140)) then --D blanco
+		red <= (others =< '1');
+		green <= (others => '1');
+		blue <= (others => '1');
+
+	elsif ((row >250 and row <280) and
+		(column >100 and column<110)) then --E cian
+		red <= (others =< '0');
+		green <= (others => '1');
+		blue <= (others => '1');
+
+	elsif ((row >240 and row <250) and
+		(column >110 and column<140)) then --G violeta
+		red <= (others =< '1');
+		green <= (others => '0');
+		blue <= (others => '1');
+
+	else			--fondo
+	red <= (others =< '0');
+		green <= (others => '0');
+		blue <= (others => '0');
+end if;
+
 
 ----- pag 73
+when nueve =>
+	if((row > 200 and row 210) and
+		(column>110 and column<140)) then --A azul
+		red <= (others =< '0');
+		green <= (others => '0');
+		blue <= (others => '1');
+
+	elsif ((row >210 and row <240) and
+		(column >140 and column<150)) then --B verde
+		red <= (others =< '0');
+		green <= (others => '1');
+		blue <= (others => '0');
+
+	elsif ((row >250 and row <280) and
+		(column >140 and column<150)) then --C rojo
+		red <= (others =< '1');
+		green <= (others => '0');
+		blue <= (others => '0');
+
+	elsif ((row >210 and row <240) and
+		(column >100 and column<110)) then --F amarillo
+		red <= (others =< '1');
+		green <= (others => '1');
+		blue <= (others => '0');
+
+
 
 ----- pag 74
+elsif ((row > 240 and row <250) and
+	(column>110 and column<140)) then --G violeta
+		red <= (others =< '1');
+		green <= (others => '0');
+		blue <= (others => '1');
+else			--fondo
+	red <= (others =< '0');
+		green <= (others => '0');
+		blue <= (others => '0');
+end if;
